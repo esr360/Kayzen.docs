@@ -42,7 +42,7 @@ The following section is only relevant if your workflow involves building Kayzen
 
 &ast; indicates that the requirement is only for [ehnanced workflow features](#enhanced-workflow-features)
 
-Both the default provided `app.js` and `app.css` contain code from several third party libraries and plugins. The files for these libraries and plugins reside in the **assets/vendor** folder, and include the following:
+Both the default provided `app.js` and `app.css` contain code from several third party libraries and plugins. The source files for these libraries and plugins reside in the **assets/vendor** folder, and include the following:
 
 * [Aloads](https://github.com/awedoo/aloads)
 * [Englighter](https://github.com/AndiDittrich/EnlighterJS)
@@ -823,7 +823,7 @@ The below values will also automatically be updated in **app.php**.
 | `realm` | `'demo'` | Can either be `demo` or `live`. Currently only used to serve placeholder images instead of stock photos. |
 | `env` | `'dev'` | Can either be `dev` or `prod`. Used to determine whether or not assets should be minified. |
 | `path` | `'root'` | Can either be `root` or `relative`, and will define how your asset paths are created. |
-| `themes` | `false` | If enabled, assets will be compiled into individual theme folders (e.g. app/themes/Kayzen/scripts/app.js). |
+| `themes` | `true` | If enabled, assets will be compiled into individual theme folders (e.g. app/themes/Kayzen/scripts/app.js). |
 
 The above options would be used when calling the grunt task, like so:
 
