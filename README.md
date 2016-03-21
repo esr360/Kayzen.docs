@@ -1,5 +1,7 @@
 # Kayzen
 
+This is the official documentation for the Kayzen HTML theme. If you are a customer of the theme you are entitled to access the private Kayzen repository located here: [https://github.com/esr360/Kayzen](https://github.com/esr360/Kayzen).
+
 * [Getting Started](#getting-started)
 * [Configure](#configure)
 * [Build](#build)
