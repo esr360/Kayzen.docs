@@ -249,7 +249,7 @@ The Enlighter plugin which is used by the Kayzen demo pages requires [MooTools](
 
 ###### Aloads/Preloaders
 
-Kayzen's main **app.scss** file attempts to import `assets/vendor/Aloads/scss/_preloaders.scss`, which does not come packaged with the default [Aloads](https://github.com/awedoo/aloads) library. Ruby Sass cannot import **.css** files which is why the app must look for a **.scss** file. Other than the extension, the contents of these two files would be identical. If you maually create this file and directory, Git will complain that you have made changes to the **Aloads** submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.
+Kayzen's main **app.scss** file attempts to import `assets/vendor/Aloads/scss/_preloaders.scss`, which does not come packaged with the default [Aloads](https://github.com/awedoo/aloads) library. Ruby Sass cannot import **.css** files which is why the app must look for a **.scss** file. Other than the extension, the contents of these two files would be identical. If you maually create this file and directory, Git will complain that you have made changes to the **Aloads** submodule, so it is recommended that your build process involves creating the file before Sass compiles, and then deleting it once the CSS has been compiled.
 
 ## Configure
 
