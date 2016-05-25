@@ -384,7 +384,15 @@ Read the [top-bar module](<?php pageLink('modules/objects/top-bar.php') ?>) page
 
 ##### Footer Twitter Feed
 
-In `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`), locate the following code:
+The easiest way to set which Twitter handle to use for the footer feed is to set it as the value for the `data-twitter-handle` attibute in the Twitter feed's HTML:
+
+```html
+<div id="footer-twitter-feed" data-twitter-handle="esr360">
+    ...
+</div>
+```
+
+Alternatively, you can leave this blank and in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`), locate the following code:
 
 ```js          
 $(_footer).footer();
@@ -441,6 +449,25 @@ $(document).ready(function() {
 ```
 
 ##### Get In Touch Form
+
+The contact form uses [Formspree](https://github.com/formspree/formspree); a quick and easy to use solution which requires no setup, just substitute your email address in the `action` attribute on the `form` element and you're good to go.
+
+```html
+<form class="form-fauxPlaceholders-html5" action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
+    ...
+</form>
+```
+
+To change which page your users get sent to upon completing the form, add the below hidden input field with your desired URL value, ensuring it has a `name` attribute of `_next`:
+
+```html
+<form class="form-fauxPlaceholders-html5" action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
+    <input type="hidden" name="_next" value="thankyou.html" ?>" />
+    ...
+</form>
+```
+
+For more features and examples, check out the [Formspree](https://formspree.io/) homepage.
 
 #### Homepages
 
@@ -853,7 +880,7 @@ Check that you have no Javascript errors and are correctly loading assets by loo
 
 ### Unit Tests
 
-We are currently writing unit tests for all custom Javascripts. These, along with other such automated tests, will be released in furutre releases of Kayzen, so stay tuned.
+We are currently writing unit tests for all custom Javascripts. These, along with other such automated tests, will be released in future releases of Kayzen, so stay tuned.
 
 ### Cross-Browser Tests
 
