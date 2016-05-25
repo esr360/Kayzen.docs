@@ -462,7 +462,7 @@ To change which page your users get sent to upon completing the form, add the be
 
 ```html
 <form action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
-    <input type="hidden" name="_next" value="thankyou.html" ?>" />
+    <input type="hidden" name="_next" value="thankyou.html" />
     ...
 </form>
 ```
