@@ -5,6 +5,10 @@ This is the official documentation for the Kayzen HTML theme. If you are a custo
 * [Getting Started](#getting-started)
 * [Configure](#configure)
 * [Build](#build)
+    * [HTML Templates](#html-templates)
+    * [PHP Templates](#php-templates)
+    * [Drag & Drop Page Builder](#drag--drop-page-builder)
+    * [Grunt Tasks](#grunt-tasks)
 * [Test & Deploy](#test--deploy)
 
 ## Getting Started
@@ -840,7 +844,7 @@ Upload the following directories to your desired server:
 
 In order for the builder to function correctly, the above directories should be uploaded to the root of your server (i.e. your.server.com/app).
 
-The builder can now be accessed by visiting `your.server.com/builder/dist/`. You can now begin to create your pages using the pre built sections. If you can errors when attempging to preview or export your pages, you may need to update the permissions of the `dist/tmp` directory to `777`.
+The builder can now be accessed by visiting `your.server.com/builder/dist/`. You can now begin to create your pages using the pre built sections. If you come across errors when attempging to preview or export your pages, you may need to update the permissions of the `dist/tmp` directory to `777`.
 
 The page builder is only used to create new HTML pages to add to your existing Kayzen project; exporting the pages using the page builder does not include the CSS and JS in the .zip file, so when you include the generated HTML files in your project ensure they have the correct paths to the CSS and JS files.
 
