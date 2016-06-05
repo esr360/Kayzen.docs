@@ -820,6 +820,30 @@ Several things are required to create a PHP page using Kayzen. Below shows the m
 
 If you are using Grunt and the provided Gruntfile.js, you can easily compile and build your app for development and production envrionments generating appropriate HTML files from your source PHP templates - see the below Grunt tasks.
 
+### Drag & Drop Page Builder
+
+You can alternatively use the provided drag and drop page builder to construct your own pages using the various premade sections which are seen throughout the demo pages.
+
+In order to use the page builder, you need to upload the neccessery files and folders to a server, as the builder requires PHP to save/preview/export the created HTML files. You can of course set up a localhost server for this if you want to run it locally.
+
+Upload the following directories to your desired server:
+
+```
+/app
+/templates
+/builder
+```
+
+* __app__ - contains all required assets (JS & CSS)
+* __templates__ - contains the templates used by the page builder
+* __builder__ - contains the page builder files
+
+In order for the builder to function correctly, the above directories should be uploaded to the root of your server (i.e. your.server.com/app).
+
+The builder can now be accessed by visiting `your.server.com/builder/dist/`. You can now begin to create your pages using the pre built sections. If you can errors when attempging to preview or export your pages, you may need to update the permissions of the `dist/tmp` directory to `777`.
+
+The page builder is only used to create new HTML pages to add to your existing Kayzen project; exporting the pages using the page builder does not include the CSS and JS in the .zip file, so when you include the generated HTML files in your project ensure they have the correct paths to the CSS and JS files.
+
 ### Grunt Tasks
 
 #### Executable Tasks
