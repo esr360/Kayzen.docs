@@ -49,9 +49,7 @@ The only files that would ever need to be modified are **app.js** and **app.css*
 
 Kayzen comes with further JavaScript and CSS files which are only used for certain pages, these will be covered later. If you're desired workflow is to directly work on these files without touching the source files they are generated from (i.e. you are not comfortable with pre-processing and concatening), a lot of this documentation may not apply to you, and you will lose out on many of the fantastic features Kayzen has to offer.
 
-If you are not yet familiar with Sass/SCSS or CSS pre-processing, checkout [this article](http://www.webdesignerdepot.com/2013/11/the-beginners-guide-to-sass/) to understand the basis about what it is and why it's beneficial. Once you've decided to make the leap, you can read about how to setup your workflow to include Sass by reading [this article](https://medium.com/@ricardozea/sass-for-beginners-the-friendliest-guide-about-how-to-install-use-sass-on-windows-22ff4a32c1f7#.wrryv6w1r).
-
-At this stage, it is not essential to know about JavaScript concatenation. As long as you are comfortable using Sass you will gain most of the benefits Kayzen has to offer. Having said that, if you are comfortable combining JavaScript files, then continue reading, otherwise head over to the [configure](#configure) section
+If you are not yet familiar with Sass/SCSS or CSS pre-processing, checkout [this article](http://www.webdesignerdepot.com/2013/11/the-beginners-guide-to-sass/) to understand the basis about what it is and why it's beneficial. Once you've decided to make the leap, you can read about how to setup your workflow to include Sass by reading [this article](https://medium.com/@ricardozea/sass-for-beginners-the-friendliest-guide-about-how-to-install-use-sass-on-windows-22ff4a32c1f7#.wrryv6w1r). 
 
 ### Building Kayzen
 
@@ -290,9 +288,20 @@ This is the root file for your project. As well as importing all the Sass module
 
 In terms of the Kayzen modules that are imported, for the most part importing the file will **not** output any code, it merely gives your codebase the ability to include it should you so desire. This is to allow you to create different themes which may or may not use all avilable modules. Any modules your theme doesn't use won't get output in the compiled CSS.
 
-Themes are located in the **themes** directory. Each theme comes with a **.scss** file and a **.js** file. Kayzen provides several themes for you to choose from:
+Themes are located in the **themes** directory. Each theme comes with a **.scss** file and a **.js** file. Kayzen provides several default themes for you to choose from:
 
-* assets/themes/**Kayzen**
+* assets/themes/[Agenda](http://skyux.com/themes/Kayzen/themes/Agenda/index.html)
+* assets/themes/[Arndale](http://skyux.com/themes/Kayzen/themes/Arndale/index.html)
+* assets/themes/[Blizzard](http://skyux.com/themes/Kayzen/themes/Blizzard/index.html)
+* assets/themes/[Coffee](http://skyux.com/themes/Kayzen/themes/Coffee/index.html)
+* assets/themes/[Dart](http://skyux.com/themes/Kayzen/themes/Dart/index.html)
+* assets/themes/[Gaucho](http://skyux.com/themes/Kayzen/themes/Gaucho/index.html)
+* assets/themes/[Hollywood](http://skyux.com/themes/Kayzen/themes/Hollywood/index.html)
+* assets/themes/[Kayzen](http://skyux.com/themes/Kayzen/pages/homepages/homepage-1.html)
+* assets/themes/[Lily](http://skyux.com/themes/Kayzen/themes/Lily/index.html)
+* assets/themes/[Mall](http://skyux.com/themes/Kayzen/themes/Mall/index.html)
+* assets/themes/[Nexus](http://skyux.com/themes/Kayzen/themes/Nexus/index.html)
+* assets/themes/[Tempus](http://skyux.com/themes/Kayzen/themes/Tempus/index.html)
 
 To set which theme your project should use, set the `$theme` variable at the top of **app.scss**. By default this is set to `Kayzen`.
 
