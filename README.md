@@ -441,7 +441,7 @@ To achieve a sticky header, add the `sticky` modifier by adding `-sticky` to the
 </header>
 ```
 
-Read the [header module](<?php pageLink('modules/objects/header.php') ?>) page for more information.
+Read the [header module](http://skyux.com/themes/Kayzen/pages/modules/objects/header.html) page for more information.
 
 ##### Fixed Top Bar
 
@@ -493,7 +493,7 @@ $(_footer).footer({
 });
 ```
 
-Read the [footer module](<?php pageLink('modules/objects/footer.php') ?>) page for more information.
+Read the [footer module](http://skyux.com/themes/Kayzen/pages/modules/objects/footer.html) page for more information.
 
 ##### Google Map
 
@@ -511,7 +511,7 @@ $('#google-map').googleMap({
 });
 ```
 
-Read the [google-map module](<?php pageLink('modules/objects/google-map.php') ?>) page for more information.
+Read the [google-map module](http://skyux.com/themes/Kayzen/pages/modules/objects/google-map.html) page for more information.
 
 ##### Social Share Widgets
 
@@ -674,7 +674,7 @@ Where `#blog-items` is the direct container of your portfolio/blog items, and `#
 
 ##### Infinite Scroll Items
 
-To create a set of infinitely-scrollable items, you can either use one of the provided [templates](<?php pageLink('templates.php#portfolio') ?>), or you can convert a non infinite-scroll template into one by doing the following:
+To create a set of infinitely-scrollable items, you can either use one of the provided [templates](http://skyux.com/themes/Kayzen/pages/templates.html#portfolio), or you can convert a non infinite-scroll template into one by doing the following:
 
 ###### Load Required Script(s)
 
