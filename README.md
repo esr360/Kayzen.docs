@@ -853,7 +853,7 @@ Using the [`grunt.option`](http://gruntjs.com/api/grunt.option) API, you can pas
 
 The below values will also automatically be updated in **app.php**.
 
-| Variable | Default Value | Description |
+| Variable | Default&nbsp;Value | Description |
 | ---      | ---           | --- |
 | `theme`  | `Kayzen`      | This is the theme you wish to compile assets from. Theme must be present in the assets/themes directory. |
 | `realm`  | `demo`        | Can either be `demo` or `live`. Currently only used to serve placeholder images instead of stock photos. |
