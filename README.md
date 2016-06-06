@@ -95,9 +95,9 @@ git clone https://github.com/esr360/Kayzen.vendor.git vendor --recursive
 
 This will install all of the required submodules in a new `vendor` directory, allowing the Kayzen assets to access them to allow them to compile.
 
-You can now process the main project's Sass file at `assets/app.scss` using your favourite compiler.
+You can now process the main project's Sass file at `assets/app.scss` using your desired compiler.
 
-##### Official Kayzen Repository
+#### Official Kayzen Repository
 
 Alternatively, if you have purchased a license for Kayzen you are entitled to access to the private Github repository [located here](https://github.com/esr360/Kayzen), which also comes with the required submodules. If you do not already have access, [get in touch with us](#) to gain access.
 
