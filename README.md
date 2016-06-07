@@ -890,7 +890,7 @@ You should be serving your users with minified versions of your assets (CSS and 
 
 ### Code Linting
 
-If you are using our Gruntfile.js, you can run Javascript and Scss linters on your code. Simply run `grunt test` to run both linters. To run only Javasctipt linting, run the `grunt jshint` task, and to run only Scss linting run the `grunt scsslint` task.
+If you are using our Gruntfile.js file, you can run Javascript and Scss linters on your code. Simply run `grunt test` to run both linters. To run only Javasctipt linting, run the `grunt jshint` task, and to run only Scss linting run the `grunt scsslint` task.
 
 ### Console Errors
 
