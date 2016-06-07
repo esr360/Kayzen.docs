@@ -56,9 +56,10 @@ If you are not yet familiar with Sass/SCSS or CSS pre-processing, checkout [this
 #### Full Requirements
 
 * Minimum Sass 3.4
-* Node
-* [GraphicsMagick*](http://www.graphicsmagick.org/)
-* [php-cgi*](https://github.com/bezoerb/grunt-php2html#installing-php-cgi)
+* Node<sup>\[1\]</sup>
+* [GraphicsMagick<sup>2</sup>](http://www.graphicsmagick.org/)
+* [php-cgi<sup>3</sup>](https://github.com/bezoerb/grunt-php2html#installing-php-cgi)
+
 
 &ast; indicates that the requirement is only for optional [ehnanced workflow features](#enhanced-workflow-features)
 
