@@ -29,7 +29,7 @@ dev/
 -- templates/
 -- Gruntfile.js
 -- package.json
-production/
+prod/
 -- app/
 -- pages/
 -- themes/
@@ -97,7 +97,7 @@ You can now process the main project's Sass file at `assets/app.scss` using your
 
 #### Official Kayzen Repository
 
-Alternatively, if you have purchased a license for Kayzen you are entitled to access to the private Github repository [located here](https://github.com/esr360/Kayzen), which also comes with the required submodules. If you do not already have access, [get in touch with us](#) to gain access.
+Alternatively, if you have purchased a license for Kayzen you are entitled to access to the private Github repository [located here](https://github.com/esr360/Kayzen), which also comes with the required submodules. If you do not already have access, [get in touch with us](http://themeforest.net/user/skyux) to gain access.
 
 > If this section is not relevent to you (i.e you have already cloned the vendor assets), head over to the [Configure](#configure) section.
 
@@ -836,7 +836,7 @@ In order for the builder to function correctly, the above directories should be 
 
 The builder can now be accessed by visiting `your.server.com/builder/dist/`. You can now begin to create your pages using the pre built sections. If you come across errors when attempging to preview or export your pages, you may need to update the permissions of the `dist/tmp` directory to `777`.
 
-The page builder is only used to create new HTML pages to add to your existing Kayzen project; exporting the pages using the page builder does not include the CSS and JS in the .zip file, so when you include the generated HTML files in your project ensure they have the correct paths to the CSS and JS files.
+The page builder is only used to create new HTML pages to add to your existing Kayzen project; exporting the pages using the page builder does not include the CSS and JS in the .zip file, so when you include the generated HTML files in your project ensure they have the correct paths to your CSS and JS files.
 
 ### Grunt Tasks
 
@@ -910,4 +910,4 @@ Check your website on multiple mobile devices before you launch to ensure there 
 
 ### Support
 
-If you encounter any issues which you cannot resolve, you can [get in touch](#) with us to receive free support.
+If you encounter any issues which you cannot resolve, you can [get in touch](http://themeforest.net/user/skyux) with us to receive free support.
