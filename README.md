@@ -35,7 +35,7 @@ prod/
 -- themes/
 ```
 
-The `dev` directory contains all source files and build tools required for building and compiling Kayzen. The `production` directory contains only the compiled assets, pages and themes ready to be edited and uploaded to a server.
+The `dev` directory contains all source files and build tools required for building and compiling Kayzen. The `prod` directory contains only the compiled assets, pages and themes ready to be edited and uploaded to a server.
 
 To start from the bottom up, Kayzen is built using HTML5, CSS3 and jQuery. At the bare minimum, each Kayzen wepage should be served the following JavaScript and CSS assets:
 
