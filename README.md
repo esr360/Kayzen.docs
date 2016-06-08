@@ -61,7 +61,9 @@ If you are not yet familiar with Sass/SCSS or CSS pre-processing, checkout [this
 * [php-cgi<sup>\[3\]</sup>](https://github.com/bezoerb/grunt-php2html#installing-php-cgi)
 
 \[1\] - Required for [Grunt](http://gruntjs.com/), the automated build tool and task runner
+
 \[2\] - Required to generate responsive image variants
+
 \[3\] - Required to convert the PHP templates into HTML files
 
 Both the default provided `app.js` and `app.css` contain code from several third party libraries and plugins. The source files for these libraries and plugins reside in the **assets/vendor** folder, and include the following:
