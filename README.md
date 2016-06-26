@@ -10,6 +10,7 @@ This is the official documentation for the Kayzen HTML theme. If you are a custo
     * [Drag & Drop Page Builder](#drag--drop-page-builder)
     * [Grunt Tasks](#grunt-tasks)
 * [Test & Deploy](#test--deploy)
+* [Support](#support)
 
 ## Getting Started
 
