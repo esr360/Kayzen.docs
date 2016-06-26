@@ -294,18 +294,18 @@ In terms of the Kayzen modules that are imported, for the most part importing th
 
 Themes are located in the **themes** directory. Each theme comes with a **.scss** file and a **.js** file. Kayzen provides several default themes for you to choose from:
 
-* assets/themes/[Agenda](http://skyux.com/themes/Kayzen/themes/Agenda/index.html)
-* assets/themes/[Arndale](http://skyux.com/themes/Kayzen/themes/Arndale/index.html)
-* assets/themes/[Blizzard](http://skyux.com/themes/Kayzen/themes/Blizzard/index.html)
-* assets/themes/[Coffee](http://skyux.com/themes/Kayzen/themes/Coffee/index.html)
-* assets/themes/[Dart](http://skyux.com/themes/Kayzen/themes/Dart/index.html)
-* assets/themes/[Gaucho](http://skyux.com/themes/Kayzen/themes/Gaucho/index.html)
-* assets/themes/[Hollywood](http://skyux.com/themes/Kayzen/themes/Hollywood/index.html)
-* assets/themes/[Kayzen](http://skyux.com/themes/Kayzen/pages/homepages/homepage-1.html)
-* assets/themes/[Lily](http://skyux.com/themes/Kayzen/themes/Lily/index.html)
-* assets/themes/[Mall](http://skyux.com/themes/Kayzen/themes/Mall/index.html)
-* assets/themes/[Nexus](http://skyux.com/themes/Kayzen/themes/Nexus/index.html)
-* assets/themes/[Tempus](http://skyux.com/themes/Kayzen/themes/Tempus/index.html)
+* assets/themes/[Agenda](http://kayzen.skyux.com/themes/Agenda/index.html)
+* assets/themes/[Arndale](http://kayzen.skyux.com/themes/Arndale/index.html)
+* assets/themes/[Blizzard](http://kayzen.skyux.com/themes/Blizzard/index.html)
+* assets/themes/[Coffee](http://kayzen.skyux.com/themes/Coffee/index.html)
+* assets/themes/[Dart](http://kayzen.skyux.com/themes/Dart/index.html)
+* assets/themes/[Gaucho](http://kayzen.skyux.com/themes/Gaucho/index.html)
+* assets/themes/[Hollywood](http://kayzen.skyux.com/themes/Hollywood/index.html)
+* assets/themes/[Kayzen](http://kayzen.skyux.com/pages/homepages/homepage-1.html)
+* assets/themes/[Lily](http://kayzen.skyux.com/themes/Lily/index.html)
+* assets/themes/[Mall](http://kayzen.skyux.com/themes/Mall/index.html)
+* assets/themes/[Nexus](http://kayzen.skyux.com/themes/Nexus/index.html)
+* assets/themes/[Tempus](http://kayzen.skyux.com/themes/Tempus/index.html)
 
 To set which theme your project should use, set the `$theme` variable at the top of **app.scss**. By default this is set to `Kayzen`.
 
@@ -313,65 +313,65 @@ You can now control every configurable aspect of your project from `assets/theme
 
 ### assets/modules/elements
 
-* [Accordions](http://skyux.com/themes/Kayzen/pages/modules/elements/accordions.html)
-* [Alert Bars](http://skyux.com/themes/Kayzen/pages/modules/elements/alert-bars.html)
-* [Blockquotes](http://skyux.com/themes/Kayzen/pages/modules/elements/blockquotes.html)
-* [Buttons](http://skyux.com/themes/Kayzen/pages/modules/elements/buttons.html)
-* [Carousels](http://skyux.com/themes/Kayzen/pages/modules/elements/carousels.html)
-* [Corner Ribbons](http://skyux.com/themes/Kayzen/pages/modules/elements/corner-ribbons.html)
-* [Forms](http://skyux.com/themes/Kayzen/pages/modules/elements/forms.html)
-* [Headings](http://skyux.com/themes/Kayzen/pages/modules/elements/headings.html)
-* [Images](http://skyux.com/themes/Kayzen/pages/modules/elements/images.html)
-* [Lists](http://skyux.com/themes/Kayzen/pages/modules/elements/lists.html)
-* [Modals](http://skyux.com/themes/Kayzen/pages/modules/elements/modals.html)
-* [Notifications](http://skyux.com/themes/Kayzen/pages/modules/elements/notifications.html)
-* [Price Charts](http://skyux.com/themes/Kayzen/pages/modules/elements/price-charts.html)
-* [Progress Bars](http://skyux.com/themes/Kayzen/pages/modules/elements/progress-bars.html)
-* [Tables](http://skyux.com/themes/Kayzen/pages/modules/elements/tables.html)
-* [Tabs](http://skyux.com/themes/Kayzen/pages/modules/elements/tabs.html)
-* [Modals](http://skyux.com/themes/Kayzen/pages/modules/elements/modals.html)
-* [Thumbnails](http://skyux.com/themes/Kayzen/pages/modules/elements/thumbnails.html)
-* [Tooltips](http://skyux.com/themes/Kayzen/pages/modules/elements/tooltips.html)
-* [Wells](http://skyux.com/themes/Kayzen/pages/modules/elements/wells.html)
-* [Widgets](http://skyux.com/themes/Kayzen/pages/modules/elements/widgets.html)
+* [Accordions](http://kayzen.skyux.com/pages/modules/elements/accordions.html)
+* [Alert Bars](http://kayzen.skyux.com/pages/modules/elements/alert-bars.html)
+* [Blockquotes](http://kayzen.skyux.com/pages/modules/elements/blockquotes.html)
+* [Buttons](http://kayzen.skyux.com/pages/modules/elements/buttons.html)
+* [Carousels](http://kayzen.skyux.com/pages/modules/elements/carousels.html)
+* [Corner Ribbons](http://kayzen.skyux.com/pages/modules/elements/corner-ribbons.html)
+* [Forms](http://kayzen.skyux.com/pages/modules/elements/forms.html)
+* [Headings](http://kayzen.skyux.com/pages/modules/elements/headings.html)
+* [Images](http://kayzen.skyux.com/pages/modules/elements/images.html)
+* [Lists](http://kayzen.skyux.com/pages/modules/elements/lists.html)
+* [Modals](http://kayzen.skyux.com/pages/modules/elements/modals.html)
+* [Notifications](http://kayzen.skyux.com/pages/modules/elements/notifications.html)
+* [Price Charts](http://kayzen.skyux.com/pages/modules/elements/price-charts.html)
+* [Progress Bars](http://kayzen.skyux.com/pages/modules/elements/progress-bars.html)
+* [Tables](http://kayzen.skyux.com/pages/modules/elements/tables.html)
+* [Tabs](http://kayzen.skyux.com/pages/modules/elements/tabs.html)
+* [Modals](http://kayzen.skyux.com/pages/modules/elements/modals.html)
+* [Thumbnails](http://kayzen.skyux.com/pages/modules/elements/thumbnails.html)
+* [Tooltips](http://kayzen.skyux.com/pages/modules/elements/tooltips.html)
+* [Wells](http://kayzen.skyux.com/pages/modules/elements/wells.html)
+* [Widgets](http://kayzen.skyux.com/pages/modules/elements/widgets.html)
 
 ### assets/modules/objects
 
-* [Billboard](http://skyux.com/themes/Kayzen/pages/modules/objects/billboard.html)
-* [Breadcrumb](http://skyux.com/themes/Kayzen/pages/modules/objects/breadcrumb.html)
-* [Countdown](http://skyux.com/themes/Kayzen/pages/modules/objects/countdown.html)
-* [Dropdown](http://skyux.com/themes/Kayzen/pages/modules/objects/dropdown.html)
-* [Earth Slider](http://skyux.com/themes/Kayzen/pages/modules/objects/earth-slider.html)
-* [Flyout Nav](http://skyux.com/themes/Kayzen/pages/modules/objects/flyout-nav.html)
-* [Footer](http://skyux.com/themes/Kayzen/pages/modules/objects/footer.html)
-* [Google Map](http://skyux.com/themes/Kayzen/pages/modules/objects/google-map.html)
-* [Header](http://skyux.com/themes/Kayzen/pages/modules/objects/header.html)
-* [Logo](http://skyux.com/themes/Kayzen/pages/modules/objects/logo.html)
-* [Mega Menu](http://skyux.com/themes/Kayzen/pages/modules/objects/mega-menu.html)
-* [Navigation](http://skyux.com/themes/Kayzen/pages/modules/objects/navigation.html)
-* [Page Overview](http://skyux.com/themes/Kayzen/pages/modules/objects/page-overview.html)
-* [Preloader](http://skyux.com/themes/Kayzen/pages/modules/objects/preloader.html)
-* [Scroll Top](http://skyux.com/themes/Kayzen/pages/modules/objects/scroll-top.html)
-* [Scroll Wheel](http://skyux.com/themes/Kayzen/pages/modules/objects/scroll-wheel.html)
-* [Search](http://skyux.com/themes/Kayzen/pages/modules/objects/search.html)
-* [Side Nav](http://skyux.com/themes/Kayzen/pages/modules/objects/side-nav.html)
-* [Sidebar](http://skyux.com/themes/Kayzen/pages/modules/objects/sidebar.html)
-* [Site Overlay](http://skyux.com/themes/Kayzen/pages/modules/objects/site-overlay.html)
-* [Top Bar](http://skyux.com/themes/Kayzen/pages/modules/objects/top-bar.html)
-* [Twitter Feed](http://skyux.com/themes/Kayzen/pages/modules/objects/twitter-feed.html)
+* [Billboard](http://kayzen.skyux.com/pages/modules/objects/billboard.html)
+* [Breadcrumb](http://kayzen.skyux.com/pages/modules/objects/breadcrumb.html)
+* [Countdown](http://kayzen.skyux.com/pages/modules/objects/countdown.html)
+* [Dropdown](http://kayzen.skyux.com/pages/modules/objects/dropdown.html)
+* [Earth Slider](http://kayzen.skyux.com/pages/modules/objects/earth-slider.html)
+* [Flyout Nav](http://kayzen.skyux.com/pages/modules/objects/flyout-nav.html)
+* [Footer](http://kayzen.skyux.com/pages/modules/objects/footer.html)
+* [Google Map](http://kayzen.skyux.com/pages/modules/objects/google-map.html)
+* [Header](http://kayzen.skyux.com/pages/modules/objects/header.html)
+* [Logo](http://kayzen.skyux.com/pages/modules/objects/logo.html)
+* [Mega Menu](http://kayzen.skyux.com/pages/modules/objects/mega-menu.html)
+* [Navigation](http://kayzen.skyux.com/pages/modules/objects/navigation.html)
+* [Page Overview](http://kayzen.skyux.com/pages/modules/objects/page-overview.html)
+* [Preloader](http://kayzen.skyux.com/pages/modules/objects/preloader.html)
+* [Scroll Top](http://kayzen.skyux.com/pages/modules/objects/scroll-top.html)
+* [Scroll Wheel](http://kayzen.skyux.com/pages/modules/objects/scroll-wheel.html)
+* [Search](http://kayzen.skyux.com/pages/modules/objects/search.html)
+* [Side Nav](http://kayzen.skyux.com/pages/modules/objects/side-nav.html)
+* [Sidebar](http://kayzen.skyux.com/pages/modules/objects/sidebar.html)
+* [Site Overlay](http://kayzen.skyux.com/pages/modules/objects/site-overlay.html)
+* [Top Bar](http://kayzen.skyux.com/pages/modules/objects/top-bar.html)
+* [Twitter Feed](http://kayzen.skyux.com/pages/modules/objects/twitter-feed.html)
 
 ### assets/modules/utilities
 
-* [Color Palette](http://skyux.com/themes/Kayzen/pages/modules/utilities/color-palette.html)
-* [Core](http://skyux.com/themes/Kayzen/pages/modules/utilities/core.html)
-* [Font Sizes](http://skyux.com/themes/Kayzen/pages/modules/utilities/font-sizes.html)
-* [Grid](http://skyux.com/themes/Kayzen/pages/modules/utilities/grid.html)
-* [Helpers](http://skyux.com/themes/Kayzen/pages/modules/utilities/helpers.html)
-* [Masonry Grid](http://skyux.com/themes/Kayzen/pages/modules/utilities/masonry-grid.html)
-* [Print](http://skyux.com/themes/Kayzen/pages/modules/utilities/print.html)
-* [Sections](http://skyux.com/themes/Kayzen/pages/modules/utilities/sections.html)
-* [Tools](http://skyux.com/themes/Kayzen/pages/modules/utilities/tools.html)
-* [Typography](http://skyux.com/themes/Kayzen/pages/modules/utilities/typography.html)
+* [Color Palette](http://kayzen.skyux.com/pages/modules/utilities/color-palette.html)
+* [Core](http://kayzen.skyux.com/pages/modules/utilities/core.html)
+* [Font Sizes](http://kayzen.skyux.com/pages/modules/utilities/font-sizes.html)
+* [Grid](http://kayzen.skyux.com/pages/modules/utilities/grid.html)
+* [Helpers](http://kayzen.skyux.com/pages/modules/utilities/helpers.html)
+* [Masonry Grid](http://kayzen.skyux.com/pages/modules/utilities/masonry-grid.html)
+* [Print](http://kayzen.skyux.com/pages/modules/utilities/print.html)
+* [Sections](http://kayzen.skyux.com/pages/modules/utilities/sections.html)
+* [Tools](http://kayzen.skyux.com/pages/modules/utilities/tools.html)
+* [Typography](http://kayzen.skyux.com/pages/modules/utilities/typography.html)
 
 To modify any of the above modules, pass your custom option to the desired module in your theme's file (e.g. assets/themes/Kayzen/_kayzen.scss) like so:
 
@@ -400,23 +400,23 @@ If the module you are editing has nestable options, you would change them like s
 
 To get started quickly, some of the most common modules you might want to configure might include:
 
-* **Colors:** assets/modules/utilities/[color-palette](http://skyux.com/themes/Kayzen/pages/modules/utilities/color-palette.html)
-* **Breakpoints:** assets/modules/utilities/[grid](http://skyux.com/themes/Kayzen/pages/modules/utilities/grid.html)
-* **Fonts:** assets/modules/utilities/[typography](http://skyux.com/themes/Kayzen/pages/modules/utilities/typography.html)
-* **Header:** assets/modules/objects/[header](http://skyux.com/themes/Kayzen/pages/modules/objects/header.html)
-* **Footer:** assets/modules/objects/[footer](http://skyux.com/themes/Kayzen/pages/modules/objects/footer.html)
+* **Colors:** assets/modules/utilities/[color-palette](http://kayzen.skyux.com/pages/modules/utilities/color-palette.html)
+* **Breakpoints:** assets/modules/utilities/[grid](http://kayzen.skyux.com/pages/modules/utilities/grid.html)
+* **Fonts:** assets/modules/utilities/[typography](http://kayzen.skyux.com/pages/modules/utilities/typography.html)
+* **Header:** assets/modules/objects/[header](http://kayzen.skyux.com/pages/modules/objects/header.html)
+* **Footer:** assets/modules/objects/[footer](http://kayzen.skyux.com/pages/modules/objects/footer.html)
 
-Once you have configured all of your desired opions, you can preview all the modules on the [Cheatsheet](http://skyux.com/themes/Kayzen/pages/cheatsheet.html) page.
+Once you have configured all of your desired opions, you can preview all the modules on the [Cheatsheet](http://kayzen.skyux.com/pages/cheatsheet.html) page.
 
 ## Build
 
-Once you have configured all of your modules, you're ready to sart building your pages. Kayzen comes with numerous templates ready-made for you to use for your pages located in the `prototype/pages` directory, you can [view them here](http://skyux.com/themes/Kayzen/pages/templates.html). New templates are added all the time, so be sure to regularly check for updates.
+Once you have configured all of your modules, you're ready to sart building your pages. Kayzen comes with numerous templates ready-made for you to use for your pages located in the `prototype/pages` directory, you can [view them here](http://kayzen.skyux.com/pages/templates.html). New templates are added all the time, so be sure to regularly check for updates.
 
 ### HTML Templates
 
 To edit the various features of the provided HTML templates, see the following sections.
 
-To change the visual appearance of the UI components, see the [Modules](http://skyux.com/themes/Kayzen/pages/modules.html) page.
+To change the visual appearance of the UI components, see the [Modules](http://kayzen.skyux.com/pages/modules.html) page.
 
 #### Global
 
@@ -454,7 +454,7 @@ To achieve a sticky header, add the `sticky` modifier by adding `-sticky` to the
 </header>
 ```
 
-Read the [header module](http://skyux.com/themes/Kayzen/pages/modules/objects/header.html) page for more information.
+Read the [header module](http://kayzen.skyux.com/pages/modules/objects/header.html) page for more information.
 
 ##### Fixed Top Bar
 
@@ -478,7 +478,7 @@ To achieve a fixed top-bar, add the `fixed` modifier by adding `-fixed` to the t
 
 Do not use a fixed top-bar in conjunction with a sticky header.
 
-Read the [top-bar module](http://skyux.com/themes/Kayzen/pages/modules/objects/top-bar.html) page for more information.
+Read the [top-bar module](http://kayzen.skyux.com/pages/modules/objects/top-bar.html) page for more information.
 
 ##### Footer Twitter Feed
 
@@ -506,9 +506,11 @@ $(_footer).footer({
 });
 ```
 
-Read the [footer module](http://skyux.com/themes/Kayzen/pages/modules/objects/footer.html) page for more information.
+Read the [footer module](http://kayzen.skyux.com/pages/modules/objects/footer.html) page for more information.
 
 ##### Google Map
+
+###### Colors/Style
 
 To change the google map colors, locate the following code in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`):
 
@@ -524,7 +526,40 @@ $('#google-map').googleMap({
 });
 ```
 
-Read the [google-map module](http://skyux.com/themes/Kayzen/pages/modules/objects/google-map.html) page for more information.
+###### Location
+
+To change the google map longitude/latitude, locate the following code in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`):
+
+```js          
+$('#google-map').googleMap();
+```
+
+And pass your desired longitude/latitude values to the function (you can use [this website to grab your values](http://mondeca.com/index.php/en/any-place-en):
+
+```js        
+$('#google-map').googleMap({
+    longitude: 48.195387,
+    latitude: -63.171387,
+});
+```
+
+###### Zoom
+
+To change the default zoom for your google map, locate the following code in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`):
+
+```js          
+$('#google-map').googleMap();
+```
+
+And pass your desired longitude/latitude values to the function (you can use [this website to grab your values](http://mondeca.com/index.php/en/any-place-en):
+
+```js        
+$('#google-map').googleMap({
+    zoom: 10
+});
+```
+
+Read the [google-map module](http://kayzen.skyux.com/pages/modules/objects/google-map.html) page for more information.
 
 ##### Social Share Widgets
 
@@ -603,7 +638,7 @@ You can easily change the number of columns for any of the provided portfolio/bl
 
 ##### Masonry Items
 
-To create columns with masonry items, you can either use one of the provided [templates](http://skyux.com/themes/Kayzen/pages/templates.html#portfolio), or you can convert a non-masonry template into one by doing the following:
+To create columns with masonry items, you can either use one of the provided [templates](http://kayzen.skyux.com/pages/templates.html#portfolio), or you can convert a non-masonry template into one by doing the following:
 
 ###### Load Required Script(s)
 
@@ -635,7 +670,7 @@ Where `#blog-items` is the direct container of your portfolio/blog items.
 
 ##### Filterable Items
 
-To create a set of filterable items, you can either use one of the provided [templates](http://skyux.com/themes/Kayzen/pages/templates.html#portfolio), or you can convert a non-filterable template into one by doing the following:
+To create a set of filterable items, you can either use one of the provided [templates](http://kayzen.skyux.com/pages/templates.html#portfolio), or you can convert a non-filterable template into one by doing the following:
 
 ###### Load Required Script(s)
 
@@ -687,7 +722,7 @@ Where `#blog-items` is the direct container of your portfolio/blog items, and `#
 
 ##### Infinite Scroll Items
 
-To create a set of infinitely-scrollable items, you can either use one of the provided [templates](http://skyux.com/themes/Kayzen/pages/templates.html#portfolio), or you can convert a non infinite-scroll template into one by doing the following:
+To create a set of infinitely-scrollable items, you can either use one of the provided [templates](http://kayzen.skyux.com/pages/templates.html#portfolio), or you can convert a non infinite-scroll template into one by doing the following:
 
 ###### Load Required Script(s)
 
