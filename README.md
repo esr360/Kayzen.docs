@@ -949,4 +949,14 @@ Check your website on multiple mobile devices before you launch to ensure there 
 
 ### Support
 
-If you encounter any issues which you cannot resolve, you can [get in touch](http://themeforest.net/user/skyux) with us to receive free support.
+#### Github Issues
+
+We encourage our customers to submit all support requests as [Github Issues](https://github.com/esr360/Kayzen/issues). This allows us to track bugs more easily, and link our code updates to specific bugs/features/requests.
+
+#### Access The Private Github Repo
+
+To access the private Kayzen repository on Github, [send us a message](http://themeforest.net/user/skyux) with your Github username and we will grant you access.
+
+#### Other support
+
+If you encounter any issues which you cannot resolve, you can [get in touch](http://themeforest.net/user/skyux) on ThemeForest with us to receive free support.
