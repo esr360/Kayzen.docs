@@ -11,6 +11,7 @@ This is the official documentation for the Kayzen HTML theme. If you are a custo
     * [Grunt Tasks](#grunt-tasks)
 * [Test & Deploy](#test--deploy)
 * [Support](#support)
+* [Changelog](#changelog)
 
 ## Getting Started
 
@@ -961,3 +962,14 @@ To access the private Kayzen repository on Github, [send us a message](http://th
 #### Other support
 
 If you encounter any issues which you cannot resolve, you can [get in touch](http://themeforest.net/user/skyux) on ThemeForest with us to receive free support.
+
+## Changelog
+
+#### Version 1.1.0
+
+Released: -
+
+###### Release Notes
+
+* Upgrading Kayzen.builder to HTML Builder version 2.25
+* Allowing location and zoom options to be passed to google map
