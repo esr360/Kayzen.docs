@@ -1,0 +1,49 @@
+
+/* Header
+================================================================ */
+
+.app-header {
+
+/******************************************************************
+Start building the basic layout
+******************************************************************/
+
+	background-color: $dark-white;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	width: 100%;
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -6px;
+		height: 6px;
+		width: 100%;
+		background-image: url('../../images/bg.jpg');
+		background-size: cover;
+		background-position: center 35%;
+	}
+
+	.theme-info,
+	.main-nav-root {
+		display: inline-block;
+	}
+
+/******************************************************************
+Start building for larger resolutions
+******************************************************************/
+
+	@media (min-width: $breakpoint-3) {
+		.header-wrapper {			
+			display: table;
+			width: 100%;
+		}	
+		.logo, .main-nav {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+} // end .app-header
+

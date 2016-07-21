@@ -1,0 +1,81 @@
+
+/* Hero
+================================================================ */
+
+.hero {
+
+/******************************************************************
+Start building the basic layout
+******************************************************************/
+
+	background-image: url('../../images/bg.jpg');
+	background-size: cover;
+	padding: 3em 0;
+	color: white;
+	font-size: $large-font-size;
+	margin-top: 4.5rem;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
+
+	a {
+		color: white;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+
+	.welcome {
+		a {
+			border-bottom: 1px dotted;
+		}		
+	}
+
+	.icon-options {
+		text-align: center;
+		.fa {
+			position: relative;
+			font-size: 1.5rem;
+			height: 3rem;
+			width: 3rem;
+			border: 1px solid white;
+			border-radius: 50%;
+			transition: 0.4s;
+			&:before {
+				position: absolute;
+				transform: translateY(-53%);
+				top: 50%;
+				left: 0;
+				right: 0;
+			}
+		}
+		h4,
+		h5 {
+			margin: 0;
+		}
+		h4 {
+			font-size: 1rem;
+		}
+		h5 {
+			font-size: 0.9rem;
+		}
+		a {
+			display: inline-block;
+			&:hover {
+				border-bottom: none;
+				.fa {
+					background-color: white;
+					border: 1px solid white;
+					color: $brand-2;
+				}
+			}
+		}
+	}
+
+/******************************************************************
+Start building for larger resolutions
+******************************************************************/
+
+	@media (min-width: $breakpoint-3) {
+
+	}
+
+} // end .app-header

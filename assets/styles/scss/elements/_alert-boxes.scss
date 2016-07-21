@@ -1,0 +1,51 @@
+
+/* Alert Bars
+================================================================ */
+
+%alert {
+	padding: 0.85em;
+	border: 1px solid;
+	font-size: 0.9em;
+	border-radius: 0.25em;
+	font-weight: lighter;
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.15);
+	a {
+		color: inherit !important;
+		border-bottom: 1px dotted;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.fa {
+		position: absolute;
+		color: inherit;
+		right: 0;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+}
+
+.alert-help {
+	@extend %alert;
+	background: desaturate(lighten($help, 25%), 20%) !important;
+	color: darken(desaturate($help, 25%), 25%);
+}
+
+.alert-info {
+	@extend %alert;
+	background: lighten($info, 25%) !important;
+	color: darken(desaturate($info, 15%), 15%);
+}
+
+.alert-danger {
+	@extend %alert;
+	background: desaturate(lighten($danger, 25%), 20%) !important;
+	color: darken(desaturate($danger, 10%), 10%);
+}
+
+.alert-success {
+	@extend %alert;
+	background: lighten($success, 25%) !important;
+	color: darken(desaturate($success, 15%), 15%);
+}

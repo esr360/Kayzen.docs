@@ -1,0 +1,36 @@
+
+/* Theme Info
+================================================================ */
+
+.theme-info {
+
+	margin-right: 2rem;
+	position: relative;
+	top: -2px;
+
+	.version,
+	.released {
+		display: inline-block;
+		vertical-align: middle;
+		h4,
+		h5 {
+			margin: 0;
+			font-weight: 100;
+		}
+		h4 {
+			color: $brand-1;
+		}
+		h5 {
+			font-size: 1rem;
+		}
+	}
+
+	.version {		
+		margin-left: 1rem;
+		margin-right: 0.75rem;
+		padding-right: 1rem;
+		border-right: 1px solid rgba(0,0,0,0.1);
+		box-shadow: inset -1px 0px 0px 0px white;
+	}
+
+} // end .theme-info

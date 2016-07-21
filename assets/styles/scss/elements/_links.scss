@@ -1,0 +1,16 @@
+
+/* Links
+================================================================ */
+
+a:not(.button) {
+    color: $brand-1;
+    transition: 0.4s;
+    text-decoration: none;
+    &:hover {
+    	border-bottom: 1px dotted $brand-1;
+    	text-decoration: none;
+    }
+    .doc-content & {
+    	font-weight: 600;
+    }
+}

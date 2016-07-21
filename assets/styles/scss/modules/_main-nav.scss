@@ -1,0 +1,62 @@
+
+/* Main Navigation
+================================================================ */
+
+.main-nav {
+
+/******************************************************************
+Start building the basic layout
+******************************************************************/
+
+	ul {
+		@extend ul.reset;
+		display: none;
+		font-size: 0;
+	    li {
+		    @import "dropdown-nav";
+			text-transform: uppercase;
+		    ul {
+		    	padding-left: 2em;
+		    }  
+		    &:hover {
+		    	> a {		    		
+					color: white;
+					background: $brand-1;
+		    	}
+		    }
+	    }
+    	a {
+			display: block;	
+			line-height: 4.2em;
+			color: $grey;
+			padding: 0 1em;
+			font-size: 1rem;
+			&:hover {
+				border-bottom: none;
+			}
+    	}
+	}
+
+	.fa-bars {
+		margin-left: 0.25em;
+	}
+
+/******************************************************************
+Start building for larger resolutions
+******************************************************************/
+
+	@media (min-width: $breakpoint-3) {
+		text-align: right;
+		ul {
+			white-space: nowrap;
+		    li {
+				display: inline-block;
+				position: relative;
+		    }
+		}
+		> ul {
+			display: block;
+		}
+	}
+
+} // end .main-nav

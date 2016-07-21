@@ -1,0 +1,64 @@
+
+/* Doc Navigation
+================================================================ */
+
+.doc-nav {
+
+	h2 {
+		font-family: $font-2;
+		font-weight: 300;
+	}
+
+	ul {
+		@extend ul.reset;
+		font-size: $large-font-size;
+		ul {
+			font-size: $base-font-size;
+			li {
+				a {
+					border-bottom: none;
+					color: $main-text-color;
+				}
+				&:before {
+					content: "-";
+					margin-right: 0.5rem;
+				}
+			}
+		}
+	}
+	li {
+		line-height: 2;
+		&.active {
+			> a {
+				border-bottom: 1px dotted;
+			}
+		}
+		a {
+			&:hover {
+				border-bottom: 1px dotted;
+			}
+		}
+	}
+
+	@media (max-height: 825px) {
+		height: 85%;
+		overflow: auto;
+	}
+
+} // end .doc-nav
+
+.with-nav {
+	.main-container {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			border-right: 1px dotted rgba(0,0,0,0.2);
+			width: 1px;
+			height: 98%;
+			height: calc(100% - 1rem);
+			left: 14.5833%;
+			top: 2.5rem;
+		}
+	}
+}

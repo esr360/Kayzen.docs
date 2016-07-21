@@ -1,0 +1,26 @@
+
+/* Breadcrumb
+======================================================================= */
+
+.breadcrumb {	
+
+	font-size: 0.9em;
+	margin: $base-margin 0;
+	padding-bottom: 1rem;
+	border-bottom: 1px dotted rgba(0,0,0,0.2);
+	ul {
+		@extend ul.reset;
+	}
+	li {
+		display: inline;
+		&:not(:last-child) {
+			margin-right: 0.2em;
+			&:after {
+				content: "\f105";
+				font-family: FontAwesome;
+				margin-left: 0.4em;
+			}
+		}
+	}
+
+} // end .breadcrumb
