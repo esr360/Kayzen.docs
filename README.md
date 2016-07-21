@@ -969,12 +969,10 @@ If you encounter any issues which you cannot resolve, you can [get in touch](htt
 
 Released: 21st July 2016
 
-* allowing location and zoom options to be passed to google map module
-* updating git submodules
-* updating HTML Builder
-* fixing HTML validation issues
-
 ###### Release Notes
 
 * Upgrading Kayzen.builder to HTML Builder version 2.25
 * Allowing location and zoom options to be passed to google map
+* updating git submodules
+* updating HTML Builder
+* fixing HTML validation issues
