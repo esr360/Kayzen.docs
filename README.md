@@ -967,7 +967,12 @@ If you encounter any issues which you cannot resolve, you can [get in touch](htt
 
 #### Version 1.1.0
 
-Released: -
+Released: 21st July 2016
+
+* allowing location and zoom options to be passed to google map module
+* updating git submodules
+* updating HTML Builder
+* fixing HTML validation issues
 
 ###### Release Notes
 
