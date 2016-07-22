@@ -5,55 +5,82 @@ This is the official documentation for the Kayzen HTML theme. If you are a custo
 * [Getting Started](#getting-started)
 * [Configure](#configure)
 * [Build](#build)
+    * [HTML Templates](#html-templates)
+    * [PHP Templates](#php-templates)
+    * [Drag & Drop Page Builder](#drag--drop-page-builder)
+    * [Grunt Tasks](#grunt-tasks)
 * [Test & Deploy](#test--deploy)
+* [Support](#support)
+* [Changelog](#changelog)
 
 ## Getting Started
 
-> [Click Here](#html-templates) if you just want to get started using the default HTML files without touching any other code.
+> [Click Here](#html-templates) if you just want to get started using the default HTML files without touching any other code or going through any further setup.
 
-It's great that you've decided to checkout Kayzen! How you go about buildig your next project with it depends on many things such as your prefered workflow, your skill level, amount of time you have etc. This page will cover the basics of all the different ways Kayzen can be adapted to suit any need. It is assumed that you have at least basic HTML, CSS and JavaScript/jQuery understanding.
+It's great that you've decided to checkout Kayzen! How you go about building your next project with it depends on many things such as your prefered workflow, your skill level, amount of time you have etc. This page will cover the basics of all the different ways Kayzen can be adapted to suit any need. It is assumed that you have at least basic HTML, CSS and JavaScript/jQuery understanding.
+
+You should have included with your purchase the following files and directories:
+
+```
+dev/
+-- app/
+-- assets/
+-- builder/
+-- docs/
+-- prototype/
+-- templates/
+-- Gruntfile.js
+-- package.json
+prod/
+-- app/
+-- pages/
+-- themes/
+```
+
+The `dev` directory contains all source files and build tools required for building and compiling Kayzen. The `prod` directory contains only the compiled assets, pages and themes ready to be edited and uploaded to a server.
 
 To start from the bottom up, Kayzen is built using HTML5, CSS3 and jQuery. At the bare minimum, each Kayzen wepage should be served the following JavaScript and CSS assets:
 
 * app/scripts/**jquery.js**
-* app/scripts/**app.js**
 * app/scripts/**pseudojQuery-start.js**
 * app/scripts/**pseudojQuery-end.js**
-* app/styles/**app.css**
+* app/themes/Kayzen/**app.css**
+* app/themes/Kayzen/**app.js**
 
 The only files that would ever need to be modified are **app.js** and **app.css**. The other files (jQuery and pseudojQuery) are JavaScript libraries which can be left untouched. Read more about pseudojQuery [here](https://github.com/esr360/pseudojQuery).
 
 Kayzen comes with further JavaScript and CSS files which are only used for certain pages, these will be covered later. If you're desired workflow is to directly work on these files without touching the source files they are generated from (i.e. you are not comfortable with pre-processing and concatening), a lot of this documentation may not apply to you, and you will lose out on many of the fantastic features Kayzen has to offer.
 
-If you are not yet familiar with Sass/SCSS or CSS pre-processing, checkout [this article](http://www.webdesignerdepot.com/2013/11/the-beginners-guide-to-sass/) to understand the basis about what it is and why it's beneficial. Once you've decided to make the leap, you can read about how to setup your workflow to include Sass by reading [this article](https://medium.com/@ricardozea/sass-for-beginners-the-friendliest-guide-about-how-to-install-use-sass-on-windows-22ff4a32c1f7#.wrryv6w1r).
-
-At this stage, it is not essential to know about JavaScript concatenation. As long as you are comfortable using Sass you will gain most of the benefits Kayzen has to offer. Having said that, if you are comfortable combining JavaScript files, then continue reading, otherwise head over to the [configure](#configure) section
+If you are not yet familiar with Sass/SCSS or CSS pre-processing, checkout [this article](http://www.webdesignerdepot.com/2013/11/the-beginners-guide-to-sass/) to understand the basis about what it is and why it's beneficial. Once you've decided to make the leap, you can read about how to setup your workflow to include Sass by reading [this article](https://medium.com/@ricardozea/sass-for-beginners-the-friendliest-guide-about-how-to-install-use-sass-on-windows-22ff4a32c1f7#.wrryv6w1r). 
 
 ### Building Kayzen
-
-The following section is only relevant if your workflow involves building Kayzen yourself from the source files form Github.
 
 #### Full Requirements
 
 * Minimum Sass 3.4
-* Node
-* [GraphicsMagick*](http://www.graphicsmagick.org/)
-* [php-cgi*](https://github.com/bezoerb/grunt-php2html#installing-php-cgi)
+* Node<sup>\[1\]</sup>
+* [GraphicsMagick<sup>\[2\]</sup>](http://www.graphicsmagick.org/)
+* [php-cgi<sup>\[3\]</sup>](https://github.com/bezoerb/grunt-php2html#installing-php-cgi)
 
-&ast; indicates that the requirement is only for [ehnanced workflow features](#enhanced-workflow-features)
+\[1\] - Required for [Grunt](http://gruntjs.com/), the automated build tool and task runner (optional)
 
-Both the default provided `app.js` and `app.css` contain code from several third party libraries and plugins. The files for these libraries and plugins reside in the **assets/vendor** folder, and include the following:
+\[2\] - Required to generate responsive image variants (optional)
 
-* [Aloads](https://github.com/awedoo/aloads)
+\[3\] - Required to convert the PHP templates into HTML files (optional)
+
+Both the default provided `app.js` and `app.css` contain code from several third party libraries and plugins. The source files for these libraries and plugins reside in the **assets/vendor** folder, and include the following:
+
 * [Englighter](https://github.com/AndiDittrich/EnlighterJS)
 * [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
 * [Infinite-AJAX-Scroll](https://github.com/webcreate/infinite-ajax-scroll)
 * [Isotope](https://github.com/metafizzy/isotope)
 * [jQuery](https://github.com/jquery/jquery)
 * [jquery-animateNumber](https://github.com/aishek/jquery-animateNumber)
+* [k-preloaders](https://github.com/esr360/k-preloaders)
 * [Kayzen-GS](https://github.com/esr360/Kayzen-GS)
 * [Magnific-Popup](https://github.com/dimsemenov/Magnific-Popup)
 * [Masonry](https://github.com/SnapKit/Masonry)
+* [matchMedia](https://github.com/paulirish/matchMedia.js)
 * [MooTools-Core](https://github.com/mootools/mootools-core)
 * [normalize-scss](https://github.com/JohnAlbin/normalize-scss)
 * [Owl-Carousel](https://github.com/smashingboxes/OwlCarousel2)
@@ -61,11 +88,24 @@ Both the default provided `app.js` and `app.css` contain code from several third
 * [SassyJSON](https://github.com/esr360/SassyJSON)
 * [ScrollTrigger](https://github.com/esr360/ScrollTrigger)
 * [Stellar](https://github.com/markdalgleish/stellar.js/)
-* [support-for](https://github.com/JohnAlbin/support-for)
 * [Synergy](https://github.com/esr360/Synergy)
 * [TweeCool](https://github.com/esr360/tweecool-jquery-plugin)
 
-You will notice that all of the used third party resources exist on Github, and as such are included as [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). If you have purchased a license for Kayzen, you are entitled to access to the private Github repository [located here](https://github.com/esr360/Kayzen). If you do not already have access, [get in touch with us](#) to gain access.
+You will notice that all of the used third party resources exist on Github, and as such are included as [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). To install the required submodules, navigate to the `assets` directory on your command line, and run the following command:
+
+```
+git clone https://github.com/esr360/Kayzen.vendor.git vendor --recursive
+```
+
+This will install all of the required submodules in a new `vendor` directory, allowing the Kayzen assets to access them to allow them to compile.
+
+You can now process the main project's Sass file at `assets/app.scss` using your desired compiler.
+
+#### Official Kayzen Repository
+
+Alternatively, if you have purchased a license for Kayzen you are entitled to access to the private Github repository [located here](https://github.com/esr360/Kayzen), which also comes with the required submodules. If you do not already have access, [get in touch with us](http://themeforest.net/user/skyux) to gain access.
+
+> If this section is not relevent to you (i.e you have already cloned the vendor assets), head over to the [Configure](#configure) section.
 
 To clone Kayzen from the official repository and all of its submodules, run the following code on your command line in the directory you wish Kayzen to be cloned into:
 
@@ -160,7 +200,8 @@ The app/scripts/**app.js** file contains the following third party JavaScript fi
 * assets/vendor/Magnific-Popup/src/js/gallery.js
 * assets/vendor/Magnific-Popup/src/js/image.js
 * assets/vendor/Magnific-Popup/src/js/retina.js
-* assets/vendor/Modular/src/modular.js
+* assets/vendor/matchMedia/matchMedia.js
+* assets/vendor/Synergy/dist/synergy.js
 * assets/vendor/jquery-animateNumber/jquery.animateNumber.js
 * assets/vendor/Kayzen.ScrollSpy/src/Kayzen.ScrollSpy.js
 * assets/vendor/ScrollTrigger/src/ScrollTrigger.js
@@ -241,16 +282,6 @@ This step is only required if you intend to use the [Enlighter](http://enlighter
 
 The Enlighter plugin which is used by the Kayzen demo pages requires [MooTools](http://mootools.net/). MooTools requires you to build the file manually. Details on how to do so can be found on the MooTools repository page. Once you have built the file, it should now be available at assets/vendor/MooTools-Core/build/**mootools-core.js**. This file should then be copied to Kayzen's **app** directory (app/scripts).
 
-##### Caveats
-
-###### Normalize-Scss
-
-[Normalize-scss](https://github.com/JohnAlbin/normalize-scss) requires the [support-for](https://github.com/JohnAlbin/support-for) library to be present within its own directory, and does not come packaged with **normalize-scss**. To clarify, the file located at assets/vendor/support-for/sass/**_support-for.scss** must be present within the assets/vendor/normalize-scss/**sass/** directory when Sass compiles, otherwise it will throw an error. If you maually copy the file over, Git will complain that you have made changes to the **normalize-scss** submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.
-
-###### Aloads/Preloaders
-
-Kayzen's main **app.scss** file attempts to import `assets/vendor/Aloads/scss/_preloaders.scss`, which does not come packaged with the default [Aloads](https://github.com/awedoo/aloads) library. Ruby Sass cannot import **.css** files which is why the app must look for a **.scss** file. Other than the extension, the contents of these two files would be identical. If you maually create this file and directory, Git will complain that you have made changes to the **Aloads** submodule, so it is recommended that your build process involves copying the file over before Sass compiles, and then deleting it once the CSS has been compiled.
-
 ## Configure
 
 Kayzen is structured in a modular way, which makes things easier for everyone. Kayzen is built using the [Synergy](https://github.com/esr360/Synergy) Sass Framework. As well as global configuration each module can be individually configured, giving you complete control and flexibility when customizing them for your project. This will also make updating your project in the future easier when new modules or module updates for Kayzen come out.
@@ -263,19 +294,88 @@ This is the root file for your project. As well as importing all the Sass module
 
 In terms of the Kayzen modules that are imported, for the most part importing the file will **not** output any code, it merely gives your codebase the ability to include it should you so desire. This is to allow you to create different themes which may or may not use all avilable modules. Any modules your theme doesn't use won't get output in the compiled CSS.
 
-Themes are located in the **themes** directory. Each theme comes with a **.scss** file and a **.js** file. Kayzen provides several themes for you to choose from:
+Themes are located in the **themes** directory. Each theme comes with a **.scss** file and a **.js** file. Kayzen provides several default themes for you to choose from:
 
-* assets/themes/**Kayzen**
+* assets/themes/[Agenda](http://kayzen.skyux.com/themes/Agenda/index.html)
+* assets/themes/[Arndale](http://kayzen.skyux.com/themes/Arndale/index.html)
+* assets/themes/[Blizzard](http://kayzen.skyux.com/themes/Blizzard/index.html)
+* assets/themes/[Coffee](http://kayzen.skyux.com/themes/Coffee/index.html)
+* assets/themes/[Dart](http://kayzen.skyux.com/themes/Dart/index.html)
+* assets/themes/[Gaucho](http://kayzen.skyux.com/themes/Gaucho/index.html)
+* assets/themes/[Hollywood](http://kayzen.skyux.com/themes/Hollywood/index.html)
+* assets/themes/[Kayzen](http://kayzen.skyux.com/pages/homepages/homepage-1.html)
+* assets/themes/[Lily](http://kayzen.skyux.com/themes/Lily/index.html)
+* assets/themes/[Mall](http://kayzen.skyux.com/themes/Mall/index.html)
+* assets/themes/[Nexus](http://kayzen.skyux.com/themes/Nexus/index.html)
+* assets/themes/[Tempus](http://kayzen.skyux.com/themes/Tempus/index.html)
 
 To set which theme your project should use, set the `$theme` variable at the top of **app.scss**. By default this is set to `Kayzen`.
 
-You can now control every configurable aspect of your project from `assets/themes/Kayzen/_kayzen.scss`. This file is where all the modules which are used by the theme are included, and also where you can pass any custom options to them. There are three types of modules, for a list of all of them and their available options, see the following links:
+You can now control every configurable aspect of your project from `assets/themes/Kayzen/_kayzen.scss`. This file is where all the modules which are used by the theme are included, and also where you can pass any custom options to them. There are three types of modules:
 
-* [assets/modules/**elements**](<?php pageLink('modules.php#kayzenElements') ?>)
-* [assets/modules/**objects**](<?php pageLink('modules.php#kayzenObjects') ?>)
-* [assets/modules/**utilities**](<?php pageLink('modules.php#kayzenUtilities') ?>)
+### assets/modules/elements
 
-You can pass a custom option to a module in your theme's file (e.g. assets/themes/Kayzen/_kayzen.scss) like so:
+* [Accordions](http://kayzen.skyux.com/pages/modules/elements/accordions.html)
+* [Alert Bars](http://kayzen.skyux.com/pages/modules/elements/alert-bars.html)
+* [Blockquotes](http://kayzen.skyux.com/pages/modules/elements/blockquotes.html)
+* [Buttons](http://kayzen.skyux.com/pages/modules/elements/buttons.html)
+* [Carousels](http://kayzen.skyux.com/pages/modules/elements/carousels.html)
+* [Corner Ribbons](http://kayzen.skyux.com/pages/modules/elements/corner-ribbons.html)
+* [Forms](http://kayzen.skyux.com/pages/modules/elements/forms.html)
+* [Headings](http://kayzen.skyux.com/pages/modules/elements/headings.html)
+* [Images](http://kayzen.skyux.com/pages/modules/elements/images.html)
+* [Lists](http://kayzen.skyux.com/pages/modules/elements/lists.html)
+* [Modals](http://kayzen.skyux.com/pages/modules/elements/modals.html)
+* [Notifications](http://kayzen.skyux.com/pages/modules/elements/notifications.html)
+* [Price Charts](http://kayzen.skyux.com/pages/modules/elements/price-charts.html)
+* [Progress Bars](http://kayzen.skyux.com/pages/modules/elements/progress-bars.html)
+* [Tables](http://kayzen.skyux.com/pages/modules/elements/tables.html)
+* [Tabs](http://kayzen.skyux.com/pages/modules/elements/tabs.html)
+* [Modals](http://kayzen.skyux.com/pages/modules/elements/modals.html)
+* [Thumbnails](http://kayzen.skyux.com/pages/modules/elements/thumbnails.html)
+* [Tooltips](http://kayzen.skyux.com/pages/modules/elements/tooltips.html)
+* [Wells](http://kayzen.skyux.com/pages/modules/elements/wells.html)
+* [Widgets](http://kayzen.skyux.com/pages/modules/elements/widgets.html)
+
+### assets/modules/objects
+
+* [Billboard](http://kayzen.skyux.com/pages/modules/objects/billboard.html)
+* [Breadcrumb](http://kayzen.skyux.com/pages/modules/objects/breadcrumb.html)
+* [Countdown](http://kayzen.skyux.com/pages/modules/objects/countdown.html)
+* [Dropdown](http://kayzen.skyux.com/pages/modules/objects/dropdown.html)
+* [Earth Slider](http://kayzen.skyux.com/pages/modules/objects/earth-slider.html)
+* [Flyout Nav](http://kayzen.skyux.com/pages/modules/objects/flyout-nav.html)
+* [Footer](http://kayzen.skyux.com/pages/modules/objects/footer.html)
+* [Google Map](http://kayzen.skyux.com/pages/modules/objects/google-map.html)
+* [Header](http://kayzen.skyux.com/pages/modules/objects/header.html)
+* [Logo](http://kayzen.skyux.com/pages/modules/objects/logo.html)
+* [Mega Menu](http://kayzen.skyux.com/pages/modules/objects/mega-menu.html)
+* [Navigation](http://kayzen.skyux.com/pages/modules/objects/navigation.html)
+* [Page Overview](http://kayzen.skyux.com/pages/modules/objects/page-overview.html)
+* [Preloader](http://kayzen.skyux.com/pages/modules/objects/preloader.html)
+* [Scroll Top](http://kayzen.skyux.com/pages/modules/objects/scroll-top.html)
+* [Scroll Wheel](http://kayzen.skyux.com/pages/modules/objects/scroll-wheel.html)
+* [Search](http://kayzen.skyux.com/pages/modules/objects/search.html)
+* [Side Nav](http://kayzen.skyux.com/pages/modules/objects/side-nav.html)
+* [Sidebar](http://kayzen.skyux.com/pages/modules/objects/sidebar.html)
+* [Site Overlay](http://kayzen.skyux.com/pages/modules/objects/site-overlay.html)
+* [Top Bar](http://kayzen.skyux.com/pages/modules/objects/top-bar.html)
+* [Twitter Feed](http://kayzen.skyux.com/pages/modules/objects/twitter-feed.html)
+
+### assets/modules/utilities
+
+* [Color Palette](http://kayzen.skyux.com/pages/modules/utilities/color-palette.html)
+* [Core](http://kayzen.skyux.com/pages/modules/utilities/core.html)
+* [Font Sizes](http://kayzen.skyux.com/pages/modules/utilities/font-sizes.html)
+* [Grid](http://kayzen.skyux.com/pages/modules/utilities/grid.html)
+* [Helpers](http://kayzen.skyux.com/pages/modules/utilities/helpers.html)
+* [Masonry Grid](http://kayzen.skyux.com/pages/modules/utilities/masonry-grid.html)
+* [Print](http://kayzen.skyux.com/pages/modules/utilities/print.html)
+* [Sections](http://kayzen.skyux.com/pages/modules/utilities/sections.html)
+* [Tools](http://kayzen.skyux.com/pages/modules/utilities/tools.html)
+* [Typography](http://kayzen.skyux.com/pages/modules/utilities/typography.html)
+
+To modify any of the above modules, pass your custom option to the desired module in your theme's file (e.g. assets/themes/Kayzen/_kayzen.scss) like so:
 
 ```scss
 @include accordions((
@@ -302,23 +402,23 @@ If the module you are editing has nestable options, you would change them like s
 
 To get started quickly, some of the most common modules you might want to configure might include:
 
-* **Colors:** assets/modules/utilities/[color-palette](<?php pageLink('modules/utilities/color-palette.php') ?>)
-* **Breakpoints:** assets/modules/utilities/[grid](<?php pageLink('modules/utilities/grid.php') ?>)
-* **Fonts:** assets/modules/utilities/[typography](<?php pageLink('modules/utilities/typography.php') ?>)
-* **Header:** assets/modules/objects/[header](<?php pageLink('modules/objects/header.php') ?>)
-* **Footer:** assets/modules/objects/[footer](<?php pageLink('modules/objects/footer.php') ?>)
+* **Colors:** assets/modules/utilities/[color-palette](http://kayzen.skyux.com/pages/modules/utilities/color-palette.html)
+* **Breakpoints:** assets/modules/utilities/[grid](http://kayzen.skyux.com/pages/modules/utilities/grid.html)
+* **Fonts:** assets/modules/utilities/[typography](http://kayzen.skyux.com/pages/modules/utilities/typography.html)
+* **Header:** assets/modules/objects/[header](http://kayzen.skyux.com/pages/modules/objects/header.html)
+* **Footer:** assets/modules/objects/[footer](http://kayzen.skyux.com/pages/modules/objects/footer.html)
 
-Once you have configured all of your desired opions, you can preview all the modules on the [Cheatsheet](<?php pageLink('cheatsheet.php') ?>) page.
+Once you have configured all of your desired opions, you can preview all the modules on the [Cheatsheet](http://kayzen.skyux.com/pages/cheatsheet.html) page.
 
 ## Build
 
-Once you have configured all of your modules, you're ready to sart building your pages. Kayzen comes with numerous templates ready-made for you to use for your pages, you can [view them here](<?php pageLink('templates.php') ?>). New templates are added all the time, so be sure to regularly check for updates.
+Once you have configured all of your modules, you're ready to sart building your pages. Kayzen comes with numerous templates ready-made for you to use for your pages located in the `prototype/pages` directory, you can [view them here](http://kayzen.skyux.com/pages/templates.html). New templates are added all the time, so be sure to regularly check for updates.
 
 ### HTML Templates
 
 To edit the various features of the provided HTML templates, see the following sections.
 
-To change the visual appearance of the UI components, see the [Modules](<?php pageLink('modules.php') ?>) page.
+To change the visual appearance of the UI components, see the [Modules](http://kayzen.skyux.com/pages/modules.html) page.
 
 #### Global
 
@@ -356,7 +456,7 @@ To achieve a sticky header, add the `sticky` modifier by adding `-sticky` to the
 </header>
 ```
 
-Read the [header module](<?php pageLink('modules/objects/header.php') ?>) page for more information.
+Read the [header module](http://kayzen.skyux.com/pages/modules/objects/header.html) page for more information.
 
 ##### Fixed Top Bar
 
@@ -380,11 +480,19 @@ To achieve a fixed top-bar, add the `fixed` modifier by adding `-fixed` to the t
 
 Do not use a fixed top-bar in conjunction with a sticky header.
 
-Read the [top-bar module](<?php pageLink('modules/objects/top-bar.php') ?>) page for more information.
+Read the [top-bar module](http://kayzen.skyux.com/pages/modules/objects/top-bar.html) page for more information.
 
 ##### Footer Twitter Feed
 
-In `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`), locate the following code:
+The easiest way to set which Twitter handle to use for the footer feed is to set it as the value for the `data-twitter-handle` attibute in the Twitter feed's HTML:
+
+```html
+<div id="footer-twitter-feed" data-twitter-handle="esr360">
+    ...
+</div>
+```
+
+Alternatively, you can leave this blank and in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`), locate the following code:
 
 ```js          
 $(_footer).footer();
@@ -400,9 +508,11 @@ $(_footer).footer({
 });
 ```
 
-Read the [footer module](<?php pageLink('modules/objects/footer.php') ?>) page for more information.
+Read the [footer module](http://kayzen.skyux.com/pages/modules/objects/footer.html) page for more information.
 
 ##### Google Map
+
+###### Colors/Style
 
 To change the google map colors, locate the following code in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`):
 
@@ -418,7 +528,40 @@ $('#google-map').googleMap({
 });
 ```
 
-Read the [google-map module](<?php pageLink('modules/objects/google-map.php') ?>) page for more information.
+###### Location
+
+To change the google map longitude/latitude, locate the following code in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`):
+
+```js          
+$('#google-map').googleMap();
+```
+
+And pass your desired longitude/latitude values to the function (you can use [this website to grab your values](http://mondeca.com/index.php/en/any-place-en):
+
+```js        
+$('#google-map').googleMap({
+    longitude: 48.195387,
+    latitude: -63.171387,
+});
+```
+
+###### Zoom
+
+To change the default zoom for your google map, locate the following code in `app/scripts/app.js` (or `app/YOURTHEME/scripts/app.js`):
+
+```js          
+$('#google-map').googleMap();
+```
+
+And pass your desired longitude/latitude values to the function (you can use [this website to grab your values](http://mondeca.com/index.php/en/any-place-en):
+
+```js        
+$('#google-map').googleMap({
+    zoom: 10
+});
+```
+
+Read the [google-map module](http://kayzen.skyux.com/pages/modules/objects/google-map.html) page for more information.
 
 ##### Social Share Widgets
 
@@ -441,6 +584,25 @@ $(document).ready(function() {
 ```
 
 ##### Get In Touch Form
+
+The contact form uses [Formspree](https://github.com/formspree/formspree); a quick and easy to use solution which requires no setup, just substitute your email address in the `action` attribute on the `form` element and you're good to go.
+
+```html
+<form action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
+    ...
+</form>
+```
+
+To change which page your users get sent to upon completing the form, add the below hidden input field with your desired URL value, ensuring it has a `name` attribute of `_next`:
+
+```html
+<form action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
+    <input type="hidden" name="_next" value="thankyou.html" />
+    ...
+</form>
+```
+
+For more features and examples, check out the [Formspree](https://formspree.io/) homepage.
 
 #### Homepages
 
@@ -478,7 +640,7 @@ You can easily change the number of columns for any of the provided portfolio/bl
 
 ##### Masonry Items
 
-To create columns with masonry items, you can either use one of the provided [templates](<?php pageLink('templates.php#portfolio') ?>), or you can convert a non-masonry template into one by doing the following:
+To create columns with masonry items, you can either use one of the provided [templates](http://kayzen.skyux.com/pages/templates.html#portfolio), or you can convert a non-masonry template into one by doing the following:
 
 ###### Load Required Script(s)
 
@@ -486,8 +648,8 @@ Load app/scripts/**isotope.pkgd.js** at the bottom of the page right underneath 
 
 ```html
 ...          
-<script src="/app/scripts/app.js">        
-<script src="/app/scripts/isotope.pkgd.js">
+<script src="/app/themes/Kayzen/app.js"></script>     
+<script src="/app/scripts/isotope.pkgd.js"></script>
 ```
 
 ###### Call The Isotope Plugin
@@ -510,7 +672,7 @@ Where `#blog-items` is the direct container of your portfolio/blog items.
 
 ##### Filterable Items
 
-To create a set of filterable items, you can either use one of the provided [templates](<?php pageLink('templates.php#portfolio') ?>), or you can convert a non-filterable template into one by doing the following:
+To create a set of filterable items, you can either use one of the provided [templates](http://kayzen.skyux.com/pages/templates.html#portfolio), or you can convert a non-filterable template into one by doing the following:
 
 ###### Load Required Script(s)
 
@@ -528,11 +690,11 @@ Add the following code wherever you want the filter navigation to appear, changi
 
 ```html      
 <ul class="tabs_nav-pills" id="blog-types">
-    <li class="button-pill-grey-1-thin active" data-filter="*">View All</li>
-    <li class="button-pill-grey-1-thin" data-filter="[data-image]">Image</li>
-    <li class="button-pill-grey-1-thin" data-filter="[data-carousel]">Carousel</li>
-    <li class="button-pill-grey-1-thin" data-filter="[data-vimeo], [data-youtube]">Video</li>
-    <li class="button-pill-grey-1-thin" data-filter="[data-audio]">Audio</li>
+    <li class="tabs_nav_item active" data-filter="*">View All</li>
+    <li class="tabs_nav_item" data-filter="[data-image]">Image</li>
+    <li class="tabs_nav_item" data-filter="[data-carousel]">Carousel</li>
+    <li class="tabs_nav_item" data-filter="[data-vimeo], [data-youtube]">Video</li>
+    <li class="tabs_nav_item" data-filter="[data-audio]">Audio</li>
 </ul>  
 ```
 
@@ -562,7 +724,7 @@ Where `#blog-items` is the direct container of your portfolio/blog items, and `#
 
 ##### Infinite Scroll Items
 
-To create a set of infinitely-scrollable items, you can either use one of the provided [templates](<?php pageLink('templates.php#portfolio') ?>), or you can convert a non infinite-scroll template into one by doing the following:
+To create a set of infinitely-scrollable items, you can either use one of the provided [templates](http://kayzen.skyux.com/pages/templates.html#portfolio), or you can convert a non infinite-scroll template into one by doing the following:
 
 ###### Load Required Script(s)
 
@@ -626,115 +788,15 @@ If you are calling other functions on your portfolio items, perhaps a carousel f
 
 The Kayzen demo pages are genrated from custom PHP source files. You are completely free to utilise these PHP templates for your own use. Whilst the PHP framework Kayzen is built from is extremely basic, it allows you to rapidly prototype pages using all the various components Kayzen has to offer. All the PHP templates are located in the **templates** directory.
 
-The core configuration file for the PHP templates can be found at templates/**app.php**. This is where all configurable templates are imported and all global constants are set, which include the following:
+The core configuration file for the PHP templates can be found at templates/**app.php** and should be included in any Kayzen PHP page. This is where all configurable templates are imported and all global constants are set, which include the following:
 
-| Constant | Default Value | Description |
-| --- | --- | --- |
-| `theme` | `'Kayzen'` | Set which theme's assets you would like to load. |
-| `realm` | `'demo'` | Can either be `demo` or `live`, currently only used to serve placeholder images instead of stock photos. |
-| `env` | `dev` | Can be either `dev` or `prod`. If `prod`, the code will look for minified (.min.*) assets. |
-| `path` | `'root'` | Can either be `root` or `relative`, and defines how asset paths should be loaded. |
-| `themes` | `true` | If enabled, templates will look to assets nested inside a self-named directory, e.g. app/themes/Kayzen/scripts/app.js. |
-
-#### Includes
-
-The below includes can be used on any page which includes the **app.php** file, and will output some code depending on the options you pass to the function. They are located in the templates/**includes** directory.
-
-* [articleItem()](#)
-* [devAsset()](#)
-
-You can use any of the above functions in yout PHP/PHTML pages like so:
-
-```php
-articleItem();
-```
-
-You can pass custom options to the function like so:
-
-```php
-articleItem(array(
-    'media'  => 'carousel',
-    'size'   => 'small',
-    'span'   => 4
-));
-```
-
-#### Modules
-
-The below modules can be used on any page which includes the **app.php** file, and will output some code depending on the options you pass to the function. They are located in the templates/**modules** directory.
-
-* [appFooter()](#)
-* [appHeader()](#)
-* [billboard()](#)
-* [earthSlider()](#)
-* [googleMap()](#)
-* [sidebar()](#)
-* [topBar()](#)
-
-You can use any of the above functions in yout PHP/PHTML pages like so:
-
-```php
-billboard();
-```
-
-You can pass custom options to the function like so:
-
-```php
-billboard(array(
-    'title'    => 'My Billboard',
-    'tag-line' => 'My Tagline'
-));
-```
-
-#### Sections
-
-The below sections can be used on any page which includes the **app.php** file, and will output some code depending on the options you pass to the function. They are located in the templates/**sections** directory.
-
-* [clients()](#)
-* [contactUs()](#)
-* [elements()](#)
-* [featureCards()](#)
-* [featureQuote()](#)
-* [inStore()](#)
-* [infoBanner()](#)
-* [keyFeatures()](#)
-* [keyFeatures-2()](#)
-* [layouts()](#)
-* [masonryFeatures()](#)
-* [moreFeatures()](#)
-* [objects()](#)
-* [options()](#)
-* [ourTeam()](#)
-* [pricing()](#)
-* [promoBanner()](#)
-* [promoSection()](#)
-* [recentWork()](#)
-* [recentArticles()](#)
-* [responsive()](#)
-* [services()](#)
-* [shareTheLove()](#)
-* [shortcodes()](#)
-* [showcase()](#)
-* [skill()](#)
-* [statistics()](#)
-* [testimonials()](#)
-* [twitterFeed()](#)
-* [whyChooseUs()](#)
-
-You can use any of the above functions in yout PHP/PHTML pages like so:
-
-```php
-clients();
-```
-
-You can pass custom options to the function like so:
-
-```php
-clients(array(
-    'title'     => 'Popular Brands',
-    'sub-title' => 'Get The Best Deals' 
-));
-```
+| Constant | Default&nbsp;Value | Description |
+| ---      | ---                | ---         |
+| `theme`  | `Kayzen`           | Set which theme's assets you would like to load. |
+| `realm`  | `demo`             | Can either be `demo` or `live`, currently only used to serve placeholder images instead of stock photos. |
+| `env`    | `dev`              | Can be either `dev` or `prod`. If `prod`, the code will look for minified (.min.*) assets. |
+| `path`   | `root`             | Can either be `root` or `relative`, and defines how asset paths should be loaded. |
+| `themes` | `true`             | If enabled, templates will look to assets nested inside a self-named directory, e.g. app/themes/Kayzen/scripts/app.js. |
 
 #### Basic Template
 
@@ -750,7 +812,7 @@ Several things are required to create a PHP page using Kayzen. Below shows the m
 <!DOCTYPE html>
 <html>
 
-    <?php include (ROOT.'/includes/head.php'); ?>
+    <?php head() ?>
 
     <body>
 
@@ -784,7 +846,7 @@ Several things are required to create a PHP page using Kayzen. Below shows the m
 
         <?php include (ROOT.'/includes/ui-enhancements.php'); ?>
 
-        <?php include (ROOT.'/includes/scripts.php'); ?>
+        <?php scripts() ?>
 
     </body>
 
@@ -793,22 +855,46 @@ Several things are required to create a PHP page using Kayzen. Below shows the m
 
 If you are using Grunt and the provided Gruntfile.js, you can easily compile and build your app for development and production envrionments generating appropriate HTML files from your source PHP templates - see the below Grunt tasks.
 
+### Drag & Drop Page Builder
+
+You can alternatively use the provided drag and drop page builder to construct your own pages using the various premade sections which are seen throughout the demo pages.
+
+In order to use the page builder, you need to upload the neccessery files and folders to a server, as the builder requires PHP to save/preview/export the created HTML files. You can of course set up a localhost server for this if you want to run it locally.
+
+Upload the following directories to your desired server:
+
+```
+/app
+/templates
+/builder
+```
+
+* __app__ - contains all required assets (JS & CSS)
+* __templates__ - contains the templates used by the page builder
+* __builder__ - contains the page builder files
+
+In order for the builder to function correctly, the above directories should be uploaded to the root of your server (i.e. your.server.com/app).
+
+The builder can now be accessed by visiting `your.server.com/builder/dist/`. You can now begin to create your pages using the pre built sections. If you come across errors when attempging to preview or export your pages, you may need to update the permissions of the `dist/tmp` directory to `777`.
+
+The page builder is only used to create new HTML pages to add to your existing Kayzen project; exporting the pages using the page builder does not include the CSS and JS in the .zip file, so when you include the generated HTML files in your project ensure they have the correct paths to your CSS and JS files.
+
 ### Grunt Tasks
 
 #### Executable Tasks
 
-| Task | Description |
-| --- | --- |
-| `grunt` | The default grunt task - runs the below `compile` task as well as the `watch` task. |
-| `grunt setup` | This runs `npm install` and any neccessery Grunt tasks for vendor assets. This only needs to be done once during your initial setup. |
-| `grunt compile` | This will compile your assets using the default value for the 'env' option. |
-| `grunt compile:dev` | This will compile your assets for a development environment (assets will be unminified). |
-| `grunt compile:prod` | This will compile your assets for a production environment (assets will be minified). |
-| `grunt templates` | Used to generate HTML pages from your PHP templates (will only look for templates in the '/pages' and '/themes' directories). |
-| `grunt prototype` | This task creates a fully useable prototype for the entire app which can be uploaded to a server. |
-| `grunt package` | This runs the `compile`, `responsive_images` and `prototype` tasks.
-| `grunt test` | This will execute code linters on your .scss and .js files. |
-| `grunt ship` | This is the final task which should be ran before deploying to production. Runs the `package`, `test` and `compress:images` tasks. |
+| Task                    | Description |
+| ---                     | --- |
+| `grunt`                 | The default grunt task - runs the below `compile` task as well as the `watch` task. |
+| `grunt setup`           | This runs `npm install` and any neccessery Grunt tasks for vendor assets. This only needs to be done once during your initial setup. |
+| `grunt compile`         | This will compile your assets using the default value for the 'env' option. |
+| `grunt compile:dev`     | This will compile your assets for a development environment (assets will be unminified). |
+| `grunt compile:prod`    | This will compile your assets for a production environment (assets will be minified). |
+| `grunt templates`       | Used to generate HTML pages from your PHP templates (will only look for templates in the '/pages' and '/themes' directories). |
+| `grunt prototype`       | This task creates a fully useable prototype for the entire app which can be uploaded to a server. |
+| `grunt package`         | This runs the `compile`, `responsive_images` and `prototype` tasks.
+| `grunt test`            | This will execute code linters on your .scss and .js files. |
+| `grunt ship`            | This is the final task which should be ran before deploying to production. Runs the `package`, `test` and `compress:images` tasks. |
 | `grunt compress:images` | This will compress all images in the 'demo' directory using the [TinyPNG API](https://tinypng.com/developers). Use liberally. |
 
 #### Grunt Options
@@ -817,13 +903,13 @@ Using the [`grunt.option`](http://gruntjs.com/api/grunt.option) API, you can pas
 
 The below values will also automatically be updated in **app.php**.
 
-| Variable | Default Value | Description |
-| --- | --- | --- |
-| `theme` | `'Kayzen'` | This is the theme you wish to compile assets from. Theme must be present in the assets/themes directory. |
-| `realm` | `'demo'` | Can either be `demo` or `live`. Currently only used to serve placeholder images instead of stock photos. |
-| `env` | `'dev'` | Can either be `dev` or `prod`. Used to determine whether or not assets should be minified. |
-| `path` | `'root'` | Can either be `root` or `relative`, and will define how your asset paths are created. |
-| `themes` | `false` | If enabled, assets will be compiled into individual theme folders (e.g. app/themes/Kayzen/scripts/app.js). |
+| Variable | Default&nbsp;Value | Description |
+| ---      | ---           | --- |
+| `theme`  | `Kayzen`      | This is the theme you wish to compile assets from. Theme must be present in the assets/themes directory. |
+| `realm`  | `demo`        | Can either be `demo` or `live`. Currently only used to serve placeholder images instead of stock photos. |
+| `env`    | `dev`         | Can either be `dev` or `prod`. Used to determine whether or not assets should be minified. |
+| `path`   | `root`        | Can either be `root` or `relative`, and will define how your asset paths are created. |
+| `themes` | `true`        | If enabled, assets will be compiled into individual theme folders (e.g. app/themes/Kayzen/scripts/app.js). |
 
 The above options would be used when calling the grunt task, like so:
 
@@ -845,7 +931,7 @@ You should be serving your users with minified versions of your assets (CSS and 
 
 ### Code Linting
 
-If you are using our Gruntfile.js, you can run Javascript and Scss linters on your code. Simply run `grunt test` to run both linters. To run only Javasctipt linting, run the `grunt jshint` task, and to run only Scss linting run the `grunt scsslint` task.
+If you are using our Gruntfile.js file, you can run Javascript and Scss linters on your code. Simply run `grunt test` to run both linters. To run only Javasctipt linting, run the `grunt jshint` task, and to run only Scss linting run the `grunt scsslint` task.
 
 ### Console Errors
 
@@ -853,7 +939,7 @@ Check that you have no Javascript errors and are correctly loading assets by loo
 
 ### Unit Tests
 
-We are currently writing unit tests for all custom Javascripts. These, along with other such automated tests, will be released in furutre releases of Kayzen, so stay tuned.
+We are currently writing unit tests for all custom Javascripts. These, along with other such automated tests, will be released in future releases of Kayzen, so stay tuned.
 
 ### Cross-Browser Tests
 
@@ -865,4 +951,28 @@ Check your website on multiple mobile devices before you launch to ensure there 
 
 ### Support
 
-If you encounter any issues which you cannot resolve, you can [get in touch](#) with us to receive free support.
+#### Github Issues
+
+We encourage our customers to submit all support requests as [Github Issues](https://github.com/esr360/Kayzen/issues). This allows us to track bugs more easily, and link our code updates to specific bugs/features/requests.
+
+#### Access The Private Github Repo
+
+To access the private Kayzen repository on Github, [send us a message](http://themeforest.net/user/skyux) with your Github username and we will grant you access.
+
+#### Other support
+
+If you encounter any issues which you cannot resolve, you can [get in touch](http://themeforest.net/user/skyux) on ThemeForest with us to receive free support.
+
+## Changelog
+
+#### Version 1.1.0
+
+Released: 21st July 2016
+
+###### Release Notes
+
+* Upgrading Kayzen.builder to HTML Builder version 2.25
+* Allowing location and zoom options to be passed to google map
+* updating git submodules
+* updating HTML Builder
+* fixing HTML validation issues
