@@ -141,6 +141,7 @@ module.exports = function(grunt) {
                 files: _scripts,
                 tasks: [
                     'concat', 
+                    'uglify',
                     'notify:scripts'
                 ]
             },

@@ -10,7 +10,6 @@ Start building the basic layout
 
 	ul {
 		@extend ul.reset;
-		display: none;
 		font-size: 0;
 	    li {
 		    @import "dropdown-nav";
@@ -53,9 +52,6 @@ Start building for larger resolutions
 				display: inline-block;
 				position: relative;
 		    }
-		}
-		> ul {
-			display: block;
 		}
 	}
 

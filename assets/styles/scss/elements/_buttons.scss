@@ -10,7 +10,7 @@ Basic Structure
 
 	background: $grey;
 	display: inline-block;
-	padding: 0 1em;
+	padding: 0 0.85em;
 	color: $white;
 	cursor: pointer;
 	text-decoration: none;
@@ -57,7 +57,6 @@ Style Variants
 	&.full-width {
 		width: 100%;
 		text-align: center;
-		padding: 0.4em;
 	}
 
 	&.round {

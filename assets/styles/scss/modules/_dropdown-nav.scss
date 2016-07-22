@@ -4,25 +4,21 @@
 ================================================================ */
 
 ul {
-
-/******************************************************************
-Start building the basic layout
-******************************************************************/
-
 	@extend ul.reset;
-	display: none;
+	text-align: left;
 	position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
 	padding-top: 6px;
 	right: 0;
-	z-index: 999;
 	min-width: 185px;
-	text-align: left;
 	font-weight: 400;
 	li {
 		display: block;
 		text-transform: none;
 		a {
-			background: rgba(0,0,0,0.85);
+			background: rgba(black,0.85);
 			color: white;
 			line-height: 45px;
 		}
@@ -31,7 +27,6 @@ Start building the basic layout
 				background: darken($brand-1, 10%);
 			}
 			> ul {
-				display: block;
 				a:hover {
 					background: darken($brand-1, 20%);
 				}
@@ -42,16 +37,9 @@ Start building the basic layout
 		top: 0;
 		right: 100%;
 	}
-
-/******************************************************************
-Start building for larger resolutions
-******************************************************************/
-
-	@media (min-width: $breakpoint-4) {
-	}
-
 } // end dropdown ul
 
-&:hover > ul {
-	display: block;
+&:hover ul {
+    opacity: 1;
+    visibility: visible;
 }

@@ -18,14 +18,7 @@
     <![endif]-->
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/styles/css/app.css">
-
-    <!-- @TODO move to Sass -->
-    <style>
-        .main-container {
-            margin-top: 8em;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/styles/css/app.min.css">
 </head>
 
 <body class="with-nav">
@@ -42,12 +35,12 @@
                         </a>
                     </div>
                     <!-- Main-Nav -->
-                    <nav class="main-nav">
+                    <nav class="main-nav min-bp3">
                         <!-- Theme Info -->
                         <div class="theme-info">
                             <div class="version">
                                 <h4>Version</h4>
-                                <h6>1.1.0</h6>
+                                <h5>1.1.0</h5>
                             </div>
                             <div class="released">
                                 <h4>Updated</h4>
@@ -99,23 +92,23 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#features-options">Features & Options</a>
+                                    <a href="#features--options">Features & Options</a>
                                     <ul>
-                                        <li><a href="#">Custom Themes</a></li>
-                                        <li><a href="#">Responsive Grid System</a></li>
-                                        <li><a href="#">Working Twitter Feed</a></li>
-                                        <li><a href="#">Working Contact Form</a></li>
-                                        <li><a href="#">Google Map</a></li>
-                                        <li><a href="#">Parallax Effects</a></li>
-                                        <li><a href="#">Video Background</a></li>
-                                        <li><a href="#">Google Fonts</a></li>
-                                        <li><a href="#">Owl Carousel</a></li>
-                                        <li><a href="#">Magnific Popup</a></li>
-                                        <li><a href="#">Font Awesome Icons</a></li>
+                                        <li><a href="#custom-themes">Custom Themes</a></li>
+                                        <li><a href="#responsive-grid-system">Responsive Grid System</a></li>
+                                        <li><a href="#working-twitter-feed">Working Twitter Feed</a></li>
+                                        <li><a href="#working-contact-form">Working Contact Form</a></li>
+                                        <li><a href="#google-map">Google Map</a></li>
+                                        <li><a href="#parallax-effects">Parallax Effects</a></li>
+                                        <li><a href="#video-background">Video Background</a></li>
+                                        <li><a href="#google-fonts">Google Fonts</a></li>
+                                        <li><a href="#owl-carousel">Owl Carousel</a></li>
+                                        <li><a href="#magnific-popup">Magnific Popup</a></li>
+                                        <li><a href="#font-awesome-icons">Font Awesome Icons</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#page-breakdown">Custom Sections</a>
+                                    <a href="#custom-sections">Custom Sections</a>
                                 </li>
                                 <li><a href="#resources">Resources</a></li>
                                 <li><a href="#notes">Notes</a></li>
@@ -126,7 +119,7 @@
 
                 <div class="span-8 doc-content">
 
-                    <h2 class="primary-title"><strong>Welcome to the Kayzen User Guide</strong></h2>
+                    <h2 class="primary-title">Welcome to the Kayzen User Guide</h2>
 
                     <h2 class="dotted" id="overview"><i>Overview</i></h2>
 
@@ -171,21 +164,21 @@
                     <p>The <strong>prod</strong> directory of your download has the following folder layout:</p>
                                 
 <pre><code class="language-markup">
-app/
-|    fonts/
-|    |  ...
-|    images/
-|    |  ...
-|    scripts/
-|    |  ...
-|    styles/
-|    |  ...
-|    themes/
-|    |  ...
-pages/
-|  ...
-themes/
-|  ...
+├── app
+│   ├── fonts
+│   │   └── ...
+│   ├── images
+│   │   └── ...
+│   ├── scripts
+│   │   └── ...
+│   ├── styles
+│   │   └── ...
+│   └── themes
+│       └── ...
+├── pages
+│   └── ...
+├── themes
+│   └── ...
 </code></pre>
 
                     <p>The only directory required to start a Kayzen project is the <strong>app</strong> directory. To learn which files need to be included in your HTML, visit the <a href="#basic-html-structure">Basic HTML Structure</a> section. The other two directories contain the demo HTML templates.</p>
@@ -216,7 +209,7 @@ themes/
 
                     <h3 id="basic-html-structure">Basic HTML Structure</h3>
 
-                    <p>Each HTML page that is provided with Kayzen and generated by the page builder has a layout similar to the below example.</p>
+                    <p>Each HTML page that is provided with Kayzen and generated by the page builder has a layout similar to the following example:</p>
 
 <pre><code class="language-markup">&lt;!DOCTYPE html>
 &lt;html>
@@ -239,7 +232,8 @@ themes/
         &lt;!--[if IE]>&lt;link rel="shortcut icon" href="/app/images/favicon.ico">&lt;![endif]-->
 
         &lt;!-- Stylesheets -->
-        &lt;link rel="stylesheet" href="/app/themes/Kayzen/app.css">        
+        &lt;link rel="stylesheet" href="/app/themes/Kayzen/app.css">  
+
         &lt;!-- pseudojQuery start -->
         &lt;script src="/app/scripts/pseudojQuery-start.js">&lt;/script>        
     &lt;/head>
@@ -268,7 +262,268 @@ themes/
 &lt;/html>
 </code></pre>
 
+                    <p>In order for any HTML page to be compatible with Kayzen, it should load the following resources:</p>
+
+                    <ul>
+                        <li>/app/themes/Kayzen/app.css</li>
+                        <li>/app/scripts/pseudojQuery-start.js (must be loaded <strong>before</strong> jQuery)</li>
+                        <li>/app/scripts/jquery.js</li>
+                        <li>/app/scripts/pseudojQuery-end.js (must be loaded <strong>after</strong> jQuery)</li>
+                        <li>/app/themes/Kayzen/app.js (must be loaded <strong>after</strong> jQuery)</li>
+                    </ul>
+
+                    <p>You can of course replace <strong>Kayzen</strong> in the above paths with any theme you have available. For a list of available default themes, <a href="http://kayzen.skyux.com/pages/demos.html" target="blank">click here</a>.
+
                     <h2 class="dotted" id="features--options"><i>Features & Options</i></h2>
+
+                    <h3 id="custom-themes">Custom Themes</h3>
+
+                    <p>One of the most powerful features of Kayzen is the ability to create your own themes (details on how to do so are available in the <a href="https://github.com/esr360/Kayzen.docs" target="blank">Developer Guide</a>). In general, Kayzen themes are interchangable and not dependent on specific HTML markup, which means you can theoretically change to a new theme just by loading the neccessery JS and CSS without having to worry about effects on your HTML.</p>
+
+                    <p class="alert-success"><a href="http://kayzen.skyux.com/pages/demos.html">Click Here</a> to view the available default themes.</p>
+
+                    <p>To change to a different theme, all you need to do is replace the theme name when loading your JS/CSS asset in yout HTML, e.g:</p>
+
+<pre><code class="language-markup">
+&lt;link rel="stylesheet" href="/app/themes/Kayzen/app.css">  
+</code></pre>
+
+                    <p><i>becomes...</i></p>
+
+<pre><code class="language-markup">
+&lt;link rel="stylesheet" href="/app/themes/Nexus/app.css">  
+</code></pre>
+
+                    <p class="alert-danger">Ensure you change both the app.css and app.js paths when switching themes</p>
+
+                    <h3 id="responsive-grid-system">Responsive Grid System</h3>
+
+                    <a href="https://github.com/esr360/Kayzen-GS" target="blank">
+                        <img src="https://raw.githubusercontent.com/esr360/Kayzen-GS/gh-pages/logo.png" width="150">
+                    </a>
+
+                    <p>Kayzen comes with a bespoke custom grid system built from the ground up to work seamlessly throughout the theme, unlike other themes which simply take parts from Bootstrap. <a href="https://github.com/esr360/Kayzen-GS" target="blank">Kayzen-GS</a> is availalbe for free on Github if you want to check it out but are not a Kayzen customer.</p> 
+
+                    <p>The default grid system is based off of 12 columns, which will become stacked ("respond") at <strong>940px</strong> by default (all of this is of course customizable).</p>
+
+                    <h4>Basic Example</h4>
+                    
+<pre><code class="language-markup">
+&lt;div class="row">
+    &lt;div class="span-4">
+        ...
+    &lt;/div>
+    &lt;div class="span-4">
+        ...
+    &lt;/div>
+    &lt;div class="span-4">
+        ...
+    &lt;/div>
+&lt;/div>
+</code></pre>
+
+                    <p class="alert-success"><a href="http://esr360.github.io/Kayzen-GS/" target="blank">Click Here</a> to view demos, examples and instructions on how to use all the various different rows and columns which come as part of the default Kayzen grid system.</p>
+
+                    <h3 id="working-twitter-feed">Working Twitter Feed</h3>
+
+                    <p>Kayzen comes with a customised Twitter Feed which you may have seen used in the <strong>footer</strong> section. To change the Twitter user from which Tweets are pulled form, locate the <strong>data-twitter-handle</strong> attribute in your HTML, and pass your desired Twitter handle:</p>
+
+<pre><code class="language-markup">
+&lt;div id="footer-twitter-feed" data-twitter-handle="envato">
+    ...
+&lt;/div>
+</code></pre>
+
+                    <p>Your footer Twitter feed will now pull tweets from <a href="https://twitter.com/envato" target="blank">@envato</a>.</p>
+
+                    <p class="alert-info">Globally changing the Twitter Feed username is covered in the <a href="http://kayzen.skyux.com/pages/modules/objects/twitter-feed.html" target="blank">Developer Guide</a>.</p>
+
+                    <h3 id="working-contact-form">Working Contact Form</h3>
+
+                    <p>The contact form uses <a href="https://github.com/formspree/formspree" target="blank">Formspree</a>; a quick and easy to use solution which requires no setup, just substitute your email address in the <strong>action</strong> attribute on the <strong>form</strong> element and you're good to go.</p>
+                    
+<pre><code class="language-markup">
+&lt;form action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
+    ...
+&lt;/form>
+</code></pre>    
+
+                    <p>To change which page your users get sent to upon completing the form, add the below hidden input field with your desired URL value, ensuring it has a <strong>name</strong> attribute of <strong>_next</strong>:</p>     
+
+<pre><code class="language-markup">
+&lt;form action="https://formspree.io/YOUR@EMAIL.COM" id="contactForm" method="post">
+    &lt;input type="hidden" name="_next" value="thankyou.html" />
+    ...
+&lt;/form>
+</code></pre>
+
+                    <p>For more features and examples, check out the <a href="https://formspree.io/">Formspree</a> homepage.</p>     
+
+                    <h3 id="google-map">Google Map</h3>
+
+                    <p>To change any of the Google Map options, you'll need to open <i>app/themes/YOURTHEME/<b>app.js</b></i>, and at the very bottom locate the following code:</p>
+
+<pre><code class="language-javascript">
+$('#google-map').googleMap();
+</code></pre>
+
+                    <p>Changing options works by passing the option and value to the plugin like so:</p>
+
+<pre><code class="language-javascript">
+$('#google-map').googleMap({
+    option-1: value,
+    option-2: value
+});
+</code></pre>
+
+                    <h4>Colors/Style</h4>
+
+                    <p>Head over to <a href="https://snazzymaps.com/" target="blank">Snazzy Maps</a> and pick your favourite style, then click the "Copy Code to Clipboard" button, or simply copy the code manually. Once you have your code copied, paste is as the value for the <strong>styles</strong> option:</p>
+
+<pre><code class="language-javascript">
+$('#google-map').googleMap({
+    styles: [
+        {
+            ...
+        }
+    ]
+});
+</code></pre>
+
+                    <h4>Location</h4>
+
+                    <p>To change the defauly location which the map lands on, pass the <strong>longitude</strong> and <strong>latitude</strong> options to the plugin:</p>
+
+<pre><code class="language-javascript">
+$('#google-map').googleMap({
+    longitude: 48.195387,
+    latitude: -63.171387,
+});
+</code></pre>
+
+                    <p class="alert-help"><strong>Hint:</strong> You can use <a href="http://mondeca.com/index.php/en/any-place-en" target="blank">this website</a> to get your coordinates.</p>
+
+                    <h3 id="parallax-effects">Parallax Effects</h3>
+
+                    <p>Kayzen uses the <a href="http://markdalgleish.com/projects/stellar.js/" target="blank">Stellar.js</a> jQuery plugin for parallax effects.</p>
+
+                    <p>To make an element's background have a parallax effect, add the <strong>data-stellar-background-ratio</strong> attribute to your element:</p>
+
+<pre><code class="language-markup">
+&lt;div data-stellar-background-ratio="0.5">...&lt;/div>
+</code></pre>
+
+                    <p class="alert-help"><a href="https://github.com/markdalgleish/stellar.js/#parallax-backgrounds" target="blank">Click Here</a> to read the relevant section of the official Stellar.js documentation.</p>
+
+                    <h3 id="video-background">Video Background</h3>
+
+                    <p>You can use a Youtube or Vimeo video as the background for the <a href="http://kayzen.skyux.com/pages/modules/objects/billboard.html" target="blank">Billboard</a> element of your pages.</p>
+
+                    <h4>Youtube</h4>
+
+<pre><code class="language-markup">
+&lt;section class="billboard-videoBg">
+    &lt;div class="auto-resizable-iframe">
+        &lt;iframe allowfullscreen="" src="src="http://www.youtube.com/embed/Q3oItpVa9fs?theme=light&autoplay=1">&lt;/iframe>
+    &lt;/div>
+&lt;/section>
+</code></pre>
+
+                    <h4>Vimeo</h4>
+
+<pre><code class="language-markup">
+&lt;section class="billboard-videoBg">
+    &lt;div class="auto-resizable-iframe">
+        &lt;iframe id="billboard_video" src="https://player.vimeo.com/video/87701971?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>&lt;/iframe>
+    &lt;/div>
+&lt;/section>
+</code></pre>
+
+                    <h3 id="google-fonts">Google Fonts</h3>
+
+                    <p>Kayzen only uses <a href="https://fonts.google.com/" target="blank">Google Fonts</a> and makes it easy to add your own.</p>
+
+                    <p>To edit/remove/add Google Fonts, open <i>app/themes/YOURTHEME/<strong>app.css</strong>, where you will find at the top the Google Font imports:</i>
+
+<pre><code class="language-css">
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,300,700,900);
+</code></pre>
+
+                    <p>Once you have imported your desired fonts, you can update the helper classes to use the new families by locating the following code in the same file (app.css), and replacing the <strong>font-family</strong> value:</p>
+
+<pre><code class="language-css">
+.font-1 {
+  font-family: "Lato";
+}
+
+.font-2 {
+  font-family: "Raleway";
+}
+</code></pre>
+
+                    <h3 id="owl-carousel">Owl Carousel</h3>
+
+                    <p>Kayzen uses <a href="http://www.owlcarousel.owlgraphic.com/">Owl-Carousel 2</a> for all carousels. Creating a carousel is simple, just add the <strong>carousel</strong> class to your container of elements:</p>
+
+<pre><code class="language-markup">
+&lt;div class="carousel">
+    &lt;div>carousel item&lt;/div>
+    &lt;div>carousel item&lt;/div>
+    &lt;div>carousel item&lt;/div>
+    &lt;div>carousel item&lt;/div>
+&lt;/div>
+</code></pre>
+
+                    <p class="alert-help">For more options and customizability, visit the official <a href="http://www.owlcarousel.owlgraphic.com/docs/started-welcome.html" target="blank">Owl Carousel documentation</a>.</p>
+
+                    <h3 id="magnific-popup">Magnific Popup</h3>
+
+                    <p>Kayzen uses the <a href="http://dimsemenov.com/plugins/magnific-popup/">Magnific Popup</a> jQuery plugin for all lightboxes and galleries.</p>
+
+                    <h4>Lightbox (single image)</h4>
+
+                    <p>To cause an element to open a specific image in a lightbox on click, use the <strong>rel="lightbox"</strong> attribute:</p>
+
+<pre><code class="language-markup">
+&lt;a href="image-1.jpg" rel="lightbox">...&lt;/a>
+</code></pre>
+
+                    <h4>Gallery</h4>
+
+                    <p>To create a gallery of multiple images, add the <strong>lightbox-gallery</strong> class to your container of thumbnails:</p>
+
+<pre><code class="language-markup">
+&lt;div class="lightbox-gallery">
+    &lt;a href="image-1.jpg" rel="lightbox">
+        &lt;img src="image-1.jpg" width="50px">
+    &lt;/a>
+    &lt;a href="image-2.jpg" rel="lightbox">
+        &lt;img src="image-2.jpg" width="50px">
+    &lt;/a>
+    &lt;a href="image-3.jpg" rel="lightbox">
+        &lt;img src="image-3.jpg" width="50px">
+    &lt;/a>
+&lt;/div>
+</code></pre>
+
+                    <p class="alert-help">For more help and information, visit the official <a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html" target="blank">Magnific Popup documentation</a>.</p>
+
+                    <h3 id="font-awesome-icons">Font Awesome Icons</h3>
+
+                    <p>Kayzen uses <a href="" target="blank">Font Awesome</a> for all icons. A full list of available icons can be found on the Font Awesome website.</p>
+
+                    <h4>Icon Button</h4>
+
+                    <p>You can create a button using Font Awesome icons like so:</p>
+
+<pre><code class="language-markup">
+&lt;a class="button-icon" href="#">
+    &lt;i class="fa fa-apple">&lt;/i>
+&lt;/a>
+</code></pre>
+
+                    <p class="alert-info">Checkout the <a href="http://kayzen.skyux.com/pages/modules/elements/buttons.html" target="blank">Buttons</a> page for available button modifiers.</p>
 
                     <h2 class="dotted" id="custom-sections"><i>Custom Sections</i></h2>
 
@@ -341,7 +596,7 @@ themes/
             <div class="container">
                 <div class="footer-wrapper text-center">
                     <!-- Copyright Section -->
-                    <h4 class="copyright">© <a href="http://skyux.com" target="blank">SkyUX.com</a> 2015</h4>
+                    <h4 class="copyright">© <a href="http://skyux.com" target="blank">SkyUX.com</a> 2016</h4>
                 </div>
             </div>
         </footer>

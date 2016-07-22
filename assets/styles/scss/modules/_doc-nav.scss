@@ -4,6 +4,9 @@
 
 .doc-nav {
 
+    height: calc(100% - 92px - 1em);
+    overflow-y: auto;
+
 	h2 {
 		font-family: $font-2;
 		font-weight: 300;
@@ -38,11 +41,6 @@
 				border-bottom: 1px dotted;
 			}
 		}
-	}
-
-	@media (max-height: 825px) {
-		height: 85%;
-		overflow: auto;
 	}
 
 } // end .doc-nav
