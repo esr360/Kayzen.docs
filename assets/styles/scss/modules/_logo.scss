@@ -15,12 +15,13 @@
 		}
 	}
 	span {
-		border-left: 1px solid rgba(0,0,0,0.1);
+		border-left: 1px solid rgba(black, 0.1);
 		padding-left: 0.45rem;
 		margin-left: 0.25rem;
 		color: lighten($grey, 15%);
 		font-style: italic;
 		font-weight: 100;
+        font-size: 0.8em;
 	}
 	/* for image logos */
 	img {

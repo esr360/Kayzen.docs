@@ -1,6 +1,6 @@
 # Kayzen
 
-This is the official documentation for the Kayzen HTML theme. If you are a customer of the theme you are entitled to access the private Kayzen repository located here: [https://github.com/esr360/Kayzen](https://github.com/esr360/Kayzen).
+This is the official developer guide for the Kayzen HTML theme. If you are a customer of the theme you are entitled to access the private Kayzen repository located here: [https://github.com/esr360/Kayzen](https://github.com/esr360/Kayzen).
 
 * [Getting Started](#getting-started)
 * [Configure](#configure)
@@ -23,11 +23,8 @@ You should have included with your purchase the following files and directories:
 
 ```
 dev/
--- app/
 -- assets/
 -- builder/
--- docs/
--- prototype/
 -- templates/
 -- Gruntfile.js
 -- package.json

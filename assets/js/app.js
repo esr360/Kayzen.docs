@@ -4695,7 +4695,7 @@ $(window).load(function(){
   // Cache selectors
   var lastId,
       topMenu = $(".doc-index > ul"),
-      topMenuHeight = topMenu.outerHeight()+15,
+      headerHeight = $('.app-header').outerHeight() + 30,
       // All list items
       menuItems = topMenu.find("a"),
       // Anchors corresponding to menu items
@@ -4707,7 +4707,7 @@ $(window).load(function(){
   // Bind to scroll
   $(window).scroll(function(){
      // Get container scroll position
-     var fromTop = $(this).scrollTop()+topMenuHeight;
+     var fromTop = $(this).scrollTop() + headerHeight;
      
      // Get id of current scroll item
      var cur = scrollItems.map(function(){

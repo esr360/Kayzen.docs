@@ -129,7 +129,7 @@
                         <article>
                             <h3 id="developer-guide">Developer Guide <span class="advanced">Advanced</span></h3>
                             <div>
-                                <p>Lorem Ipsum</p>
+                                <p>The <a href="https://github.com/esr360/Kayzen.docs" target="blank">developer guide</a> is the documentation for Kayzen available on Github. The developer guide is geared more for advanced developers who are comfortable with Sass and the command line.</p>
                             </div>
                         </article>
                     </div>
@@ -326,7 +326,7 @@
 
                     <h3 id="working-twitter-feed">Working Twitter Feed</h3>
 
-                    <p>Kayzen comes with a customised Twitter Feed which you may have seen used in the <strong>footer</strong> section. To change the Twitter user from which Tweets are pulled form, locate the <strong>data-twitter-handle</strong> attribute in your HTML, and pass your desired Twitter handle:</p>
+                    <p>Kayzen comes with a customised Twitter Feed which you may have seen used in the <strong>footer</strong> section. To change the Twitter user from which Tweets are pulled form, locate the <strong>data-twitter-handle</strong> attribute in your HTML, and pass your desired Twitter username:</p>
 
 <pre><code class="language-markup">
 &lt;div id="footer-twitter-feed" data-twitter-handle="envato">
@@ -526,6 +526,82 @@ $('#google-map').googleMap({
                     <p class="alert-info">Checkout the <a href="http://kayzen.skyux.com/pages/modules/elements/buttons.html" target="blank">Buttons</a> page for available button modifiers.</p>
 
                     <h2 class="dotted" id="custom-sections"><i>Custom Sections</i></h2>
+                    
+                    <h3>Header</h3>
+
+                    <h4>Logo</h4>
+
+                    <p>To replace the default logo with your own, locate the element with the <strong>logo</strong> class in your HTML and update the image path with the path to your logo:</p>
+
+<pre><code class="language-markup">
+&lt;div class="logo">
+    &lt;a href="/index.html">
+        &lt;img src="/app/images/logo-white.png" alt="logo" />
+    &lt;/a>
+&lt;/div>
+</code></pre>
+
+                    <h4>Sticky Header</h4>
+
+                    <p>To cause the header to be sticky when scrolled, append <strong>-sticky</strong> to the <strong>app-header</strong> component:</strong>
+
+<pre><code class="language-markup">
+&lt;header class="app-header-bar-absolute-sticky">
+    ...
+&lt;/header>
+</code></pre>
+
+                    <h4>Side Header</h4>
+
+                    <p>To create either a left or right sidebar header, append <strong>-side-left</strong> or <strong>-side-right</strong> to the <strong>app-header</strong> component, removing all other modifiers:</strong>
+
+<pre><code class="language-markup">
+&lt;header class="app-header-side-left">
+    ...
+&lt;/header>
+</code></pre>
+
+                    <h3>Footer</h3>
+
+                    <h4>Twitter Feed</h4>
+
+                    <p>To change the Twitter user from which Tweets are pulled form, locate the <strong>data-twitter-handle</strong> attribute, and pass your desired Twitter username:</p>
+
+<pre><code class="language-markup">
+&lt;div id="footer-twitter-feed" data-twitter-handle="envato">
+    ...
+&lt;/div>
+</code></pre>
+
+                    <p>Your footer Twitter feed will now pull tweets from <a href="https://twitter.com/envato" target="blank">@envato</a>.</p>
+
+                    <h3>Earth Slider</h3>
+
+                    <p class="alert-success"><a href="http://kayzen.skyux.com/themes/Nexus/index.html#s-about" target="blank">Click Here</a> to view an example of the Earth Slider.</p>
+
+                    <p>The Earth Slider support an unlimited number of pins, though 3 are provided by default. You can change which pin acts as the starting one by locating the following code in the <strong>pageScripts()</strong> function on any page that uses the Earth Slider (the function will be in the HTML embedded within <strong>script</strong> tags):</p>
+
+<pre><code class="language-markup">
+&lt;script>
+    
+    $(document).ready(pageScripts);
+    
+    function pageScripts() {
+        $('.earth-slider').KayzenEarthSlider();
+    }
+    
+&lt;/script>
+</code></pre>
+
+                    <p>To change the starting pin pass the <strong>startingSection</strong> option to the plugin:</p>
+
+<pre><code class="language-javascript">
+$('.earth-slider').KayzenEarthSlider({
+    startingSection: 4
+});
+</code></pre>
+
+                    <p>This will set the fourth section as the default starting one (assuming your custom Earth Slider had 4 pins).</p>
 
                     <h2 class="dotted" id="resources"><i>Resources</i></h2>
 
@@ -533,34 +609,53 @@ $('#google-map').googleMap({
 
                     <h3>Tools/Utilities</h3>
 
-                    <ul class="clear">
-                        <li><a target="blank" href="http://www.onenexusproject.com/">One Nexus</a> (Created by us!)</li>
-                        <li><a target="blank" href="http://html5boilerplate.com/">HTML5 Boilerplate</a></li>
-                        <li><a target="blank" href="http://modernizr.com/">Modernizr</a></li>
-                        <li><a target="blank" href="http://necolas.github.io/normalize.css/">Normalize</a></li>
-                        <li><a target="blank" href="http://codecanyon.net/item/livicons-303-truly-animated-vector-icons/4618985">Livicons</a></li>
-                        <li><a target="blank" href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
-                        <li><a target="blank" href="http://owlgraphic.com/owlcarousel/">Owl Carousel</a></li>
-                        <li><a target="blank" href="http://www.tipue.com/tipr/">Tipr</a></li>
-                        <li><a target="blank" href="https://github.com/aishek/jquery-animateNumber">animateNumber</a></li>
-                        <li><a target="blank" href="http://raphaeljs.com/">Raphaël</a></li>
-                        <li><a target="blank" href="http://dimsemenov.com/plugins/magnific-popup/">Magnific Popup</a></li>
+                    <p>Kayzen makes use of many available open source tools which are all available on Github. Your download comes with everything you need to use the default themes, but for advanced customization you can get all the third party tools used on <a href="https://github.com/esr360/Kayzen.vendor" target="blank">Github as git submodules</a>.</p>
+
+                    <ul> 
+                        <li><a href="https://github.com/AndiDittrich/EnlighterJS" target="blank">Enlighter</a></li>
+                        <li><a href="https://github.com/FortAwesome/Font-Awesome" target="blank">Font Awesome</a></li>
+                        <li><a href="https://github.com/webcreate/infinite-ajax-scroll" target="blank">Infinite AJAX Scroll</a></li>
+                        <li><a href="https://github.com/metafizzy/isotope" target="blank">Isotope</a></li>
+                        <li><a href="https://github.com/esr360/Kayzen-GS" target="blank">KayzenGS</a> Grid System</li>
+                        <li><a href="https://github.com/dimsemenov/Magnific-Popup" target="blank">Magnific Popup</a></li>
+                        <li><a href="https://github.com/SnapKit/Masonry" target="blank">Masonry</a></li>
+                        <li><a href="https://github.com/mootools/mootools-core" target="blank">MooTools Core</a></li>
+                        <li><a href="https://github.com/OwlCarousel2/OwlCarousel2" target="blank">Owl Carousel 2</a></li>
+                        <li><a href="https://github.com/esr360/ScrollTrigger" target="blank">ScrollTrigger</a></li>
+                        <li><a href="https://github.com/markdalgleish/stellar.js" target="blank">Stellar</a></li>
+                        <li><a href="https://github.com/esr360/Synergy" target="blank">Synergy</a> Sass Framework</li>
+                        <li><a href="https://github.com/esr360/tweecool-jquery-plugin" target="blank">TweeCool</a></li>
+                        <li><a href="https://github.com/jquery/jquery" target="blank">jQuery</a></li>
+                        <li><a href="https://github.com/aishek/jquery-animateNumber" target="blank">jquery-animateNumber</a></li>
+                        <li><a href="https://github.com/esr360/k-preloaders" target="blank">k-preloaders</a></li>
+                        <li><a href="https://github.com/paulirish/matchMedia.js" target="blank">matchMedia</a></li>
+                        <li><a href="https://github.com/JohnAlbin/normalize-scss" target="blank">normalize-scss</a></li>
+                        <li><a href="https://github.com/esr360/pseudojQuery" target="blank">pseudojQuery</a></li>
                     </ul>
 
-                    <h3>Stock Images/Videos</h3>
+                    <h3>Stock Images</h3>
 
                     <ul class="clear">
                         <li><a target="blank" href="http://unsplash.com">Unsplash</a></li>
                         <li><a target="blank" href="https://www.flickr.com/photos/astragony/">Flickr - Daniel Zedda</a></li>
                         <li><a target="blank" href="http://www.envato.com/">Envato</a> marketplace logos</li> 
-                        <li><a target="blank" href="http://www.wedistill.io">Distill</a> (video background)</li>
                     </ul>
+
+                    <p>The following graphics are included with an extended license from Graphic River:</p>
+
+                    <ul class="clear">
+                        <li><a href="http://graphicriver.net/item/iscreen-mockup/6588204">iScreen Mockup</a></li>
+                        <li><a href="http://graphicriver.net/item/3d-polygon-dark-backgrounds/4728302">3D Polygon Dark Backgrounds</a></li>
+                    </ul>
+
+                    <p>All other graphics are created by us.</p>
 
                     <h3>Fonts</h3>
 
                     <ul class="clear">
-                        <li><a href="https://www.google.com/fonts/specimen/Lato" target="blank">Lato</a></li>
-                        <li><a href="http://www.google.com/fonts/specimen/Raleway" target="blank">Raleway</a></li>
+                        <li><a href="https://www.google.com/fonts/specimen/Lato" rel="nofollow">Lato</a></li>
+                        <li><a href="https://www.google.com/fonts/specimen/Raleway" rel="nofollow">Raleway</a></li>
+                        <li><a href="https://www.google.com/fonts/specimen/Bitter" rel="nofollow">Bitter</a></li>
                     </ul>
 
                     <p class="alert-success">Everything else, including all code and images, except where explictly stated, is created by us.</p>
@@ -570,15 +665,6 @@ $('#google-map').googleMap({
                     <h3>Support</h3>
 
                     <p>We will happily provide any basic support for our customers free of charge on the ThemeForest comments section.</p>
-
-                    <h3>Opera Compatibility Issues</h3>
-
-                    <p>Due to some compatibility issues with the Opera web browser, the following features have been modified:</p>
-
-                    <ol class="clear">
-                        <li>The Flyout Navigation is used on desktops instead of the Control Panel Navigation</li>
-                        <li>Some instances of dynamic circular images render as squares</li>
-                    </ol>
 
                 </div>
                 <div class="span-2 side-bar-wrapper">
