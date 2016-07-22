@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -22,8 +19,13 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/styles/css/app.css">
-    <!-- Modernizr -->
-    <script src="assets/js/modernizr.min.js"></script>
+
+    <!-- @TODO move to Sass -->
+    <style>
+        .main-container {
+            margin-top: 8em;
+        }
+    </style>
 </head>
 
 <body class="with-nav">
@@ -45,7 +47,7 @@
                         <div class="theme-info">
                             <div class="version">
                                 <h4>Version</h4>
-                                <h5>1.1.0</h5>
+                                <h6>1.1.0</h6>
                             </div>
                             <div class="released">
                                 <h4>Updated</h4>
@@ -72,51 +74,10 @@
 
         <!-- Main Content -->
 
-        <section class="hero">
-            <div class="container">
-                <div class="row block-columns">
-                    <div class="span-5 va-middle welcome">
-                        <p>Thank you for purchasing <a href="https://themeforest.net/item/kayzen-make-theming-great-again/16768920">Kayzen</a>, we hope you enjoy using it. Please read through this user guide we have prepared to make your experience with this theme as smooth as possible.</p>
-                    </div>
-                    <div class="span-3">
-                    </div>
-                    <div class="span-4 va-middle icon-options"> 
-                        <div class="row bp0">
-                            <div class="span-4">
-                                <a href="https://twitter.com/ESR360" target="blank">
-                                    <i class="fa fa-twitter"></i>
-                                    <h4>Twitter</h4>
-                                </a>
-                            </div>
-                            <div class="span-4">
-                                <a href="https://dribbble.com/esr360" target="blank">
-                                    <i class="fa fa-dribbble"></i>
-                                    <h4>Dribbble</h4>
-                                </a>
-                            </div>
-                            <div class="span-4">
-                                <a href="http://www.edmundreed.co.uk/" target="blank">
-                                    <i class="fa fa-home"></i>
-                                    <h4>Homepage</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <div class="container main-container">
 
-            <!-- Breadcrumb -->
-            <nav class="breadcrumb">
-                <ul>
-                    <li><a href="../">Kayzen</a></li>
-                    <li><a href="index.html">User Guide</a></li>
-                </ul>
-            </nav>
-
             <div class="row">
+
                 <div class="span-2 doc-nav-wrapper">
                     <div class="doc-nav">
                         <h2>Navigation</h2>
@@ -125,29 +86,36 @@
                                 <li>
                                     <a href="#overview">Overview</a>
                                     <ul>
+                                        <li><a href="#developer-guide">Developer Guide</a></li>
                                         <li><a href="#compatibility">Compatibility</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#getting-started">Getting started</a>
                                     <ul>
-                                        <li><a href="#page-builder">Drag & Drop Page Builder</a></li>
                                         <li><a href="#project-architecture">Project Architecture</a></li>
+                                        <li><a href="#page-builder">Drag & Drop Page Builder</a></li>
                                         <li><a href="#basic-html-structure">Basic HTML Structure</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#features-options">Features & Options</a>
                                     <ul>
-                                        <li><a href="#general">General</a></li>
+                                        <li><a href="#">Custom Themes</a></li>
+                                        <li><a href="#">Responsive Grid System</a></li>
+                                        <li><a href="#">Working Twitter Feed</a></li>
+                                        <li><a href="#">Working Contact Form</a></li>
+                                        <li><a href="#">Google Map</a></li>
+                                        <li><a href="#">Parallax Effects</a></li>
+                                        <li><a href="#">Video Background</a></li>
+                                        <li><a href="#">Google Fonts</a></li>
+                                        <li><a href="#">Owl Carousel</a></li>
+                                        <li><a href="#">Magnific Popup</a></li>
+                                        <li><a href="#">Font Awesome Icons</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#page-breakdown">Theme Content</a>
-                                    <ul>
-                                        <li><a href="#global">Global</a></li>
-                                        <li><a href="#further-pages">Theme Sections</a></li>
-                                    </ul>
+                                    <a href="#page-breakdown">Custom Sections</a>
                                 </li>
                                 <li><a href="#resources">Resources</a></li>
                                 <li><a href="#notes">Notes</a></li>
@@ -155,15 +123,25 @@
                         </nav>
                     </div>
                 </div>
+
                 <div class="span-8 doc-content">
 
-                    <h2 class="primary-title"><strong>Welcome to Our User Guide</strong></h2>
+                    <h2 class="primary-title"><strong>Welcome to the Kayzen User Guide</strong></h2>
 
                     <h2 class="dotted" id="overview"><i>Overview</i></h2>
 
-                    <p>Welcome to the Kayzen user guide. Contained within your download should be a <strong>dev</strong> directory as well as a <strong>prod</strong> directory. This guide will focus only on the contents of the <strong>prod</strong> directory, which contains all the HTML, CSS and JavaScript files required to build your theme. The <strong>dev</strong> directory contains all the source files from which Kayzen is built. For a more comprehensive documentation focusing on the source files, view the <a href="https://github.com/esr360/Kayzen.docs" target="blank">Kayzen documentation</a> on Github.</p>
+                    <p>Welcome to the Kayzen user guide. Contained within your download should be a <strong>dev</strong> directory as well as a <strong>prod</strong> directory. This guide will focus only on the contents of the <strong>prod</strong> directory, which contains all the HTML, CSS and JavaScript files required to build your theme. The <strong>dev</strong> directory contains all the source files from which Kayzen is built. For a more comprehensive documentation focusing on the source files, visit the <a href="https://github.com/esr360/Kayzen.docs" target="blank">developer guide</a> on Github.</p>
 
-                    <h3 id="page-builder">Compatibility</h3>
+                    <div class="accordion">
+                        <article>
+                            <h3 id="developer-guide">Developer Guide <span class="advanced">Advanced</span></h3>
+                            <div>
+                                <p>Lorem Ipsum</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <h3 id="compatibility">Compatibility</h3>
 
                     <p>Whilst we thoroughly enjoy experimenting with the latest technologies, we also like to ensure that our products work on a wide vareity of devices. Our themes are compatible with all the latest browsers and devices, degrading gracefully where applicable.</p>
 
@@ -188,167 +166,111 @@
 
                     <h2 class="dotted" id="getting-started"><i>Getting Started</i></h2>
 
-                    <h3 id="page-builder">Drag & Drop Page Builder</h3>
-                    
-                    <div class="accordion">
-                        <article class="active">
-                            <h3 id="project-architecture"><strong>Project Architecture</strong><span class="advanced">Advanced</span></h3>
-                            <div style="display: block;">
-                                <p>Nexus is built using our own custom front end framework, <a href="http://onenexusproject.com" target="blank">One Nexus</a>. Built using the popular <a href="https://html5boilerplate.com/" target="blank">HTML5 Boilerplate</a> and <a href="http://sass-lang.com/" target="blank">Sass</a> CSS extension language, Nexus is ready for the modern web out-the-box. With a unique and intuitive project architecture, customising your theme couldn't be easier.</p>
+                    <h3 id="project-architecture">Project Architecture</h3>
 
-                                <p class="alert-help">If you are not comfortable using Sass you can still directly edit the compiled <b>app.css</b> stylesheet.</p>
+                    <p>The <strong>prod</strong> directory of your download has the following folder layout:</p>
                                 
 <pre><code class="language-markup">
-assets/
-|    icons/
+app/
+|    fonts/
 |    |  ...
 |    images/
 |    |  ...
-|    js/
+|    scripts/
 |    |  ...
-|    Styles/
-|    |    css/
-|    |    |  ...
-|    |    scss/
-|    |    |- elements/
-|    |    |     ...
-|    |    |- modules/
-|    |    |     ...
-|    |    |- pages/
-|    |    |     ...
-|    |    |- sections/
-|    |    |     ...        
-|    |    |- skeleton/
-|    |    |     ...
-|    |    |- styles.scss
-about.html
-...
-single-project.html
+|    styles/
+|    |  ...
+|    themes/
+|    |  ...
+pages/
+|  ...
+themes/
+|  ...
 </code></pre>
 
-                                <p class="alert-info">To learn more about the CSS architecture of this theme, vsit the official <a href="http://onenexusproject.com/documentation/getting-started/" target="blank">One Nexus Documentaion</a>.</p>
+                    <p>The only directory required to start a Kayzen project is the <strong>app</strong> directory. To learn which files need to be included in your HTML, visit the <a href="#basic-html-structure">Basic HTML Structure</a> section. The other two directories contain the demo HTML templates.</p>
 
-                                <p>By default, we provide all source files as uncompressed and unconcatenated files, and include them as such. This allows you to be as flexible as you like with your workflow. Not all assets will be required for each page Read the <a href="#optimisation-performance">Optimisations & Performance</a> section to learn about minifying your assets for improved performance.</p>
+                    <p>By default, we provide all assets uncompressed. This is to allow you to easily make changes to Kayzen's features and options out the box without having to worry about any build tools.</p>
 
-                            </div>
-                        </article>
-                    </div>
+                    <h3 id="page-builder">Drag & Drop Page Builder</h3>
+
+                    <p class="alert-success"><a href="http://kayzen.skyux.com/builder/dist/" target="blank">Click here</a> to view a live demo of the page builder.</p>
+
+                    <p>The quickest way to get started with Kayzen is to use the provided drag & drop page builder. This allows you to quickly create HTML pages using premade sections seen throughout the demo pages.</p>
+
+                    <p class="alert-info">The Kayzen page builder is a modified version of the popular <a href="https://codecanyon.net/item/html-builder-frontend-version/8432859" target="blank">HTML Builder</a>.</p>
+
+                    <h4 id="drag--drop-installation">Installation</h3>
+
+                    <ul>
+                        <li>Upload the <strong>dev/builder/dist/</strong> directory to <strong>yourdomain.com/builder/dist/</strong></li>
+                        <li>Upload the <strong>prod/app/</strong> directory to <strong>yourdomain.com/app/</strong></li>
+                    </ul>
+
+                    <h4 id="drag--drop-usage">Usage</h3>
+
+                    <ul>
+                        <li>Vist <strong>yourdomain.com/builder/dist/</strong>, create and export your pages</li>
+                        <li>Upload your exported HTML pages to <strong>yourdomain.com</strong></li>
+                    </ul>
 
                     <h3 id="basic-html-structure">Basic HTML Structure</h3>
 
-                    <p>Each HTML page that is provided with this theme has a layout similar to the below example. This layout is based off the <a href="https://html5boilerplate.com/" target="blank">HTML5 Boilerplate</a> and is ready for the modern web. Being built off the HTML5 Boilerplate means this theme comes with several useful advatages including:</p>
+                    <p>Each HTML page that is provided with Kayzen and generated by the page builder has a layout similar to the below example.</p>
 
-                    <ul class="clear">
-                        <li><a target="blank" href="http://necolas.github.io/normalize.css/">Normalize.css</a> for CSS normalizations and common bug fixes</li>
-                        <li><a target="blank" href="http://jquery.com/">jQuery</a> via CDN, with a local fallback</li>
-                        <li><a target="blank" href="http://modernizr.com/">Modernizr</a> build for feature detection</li>
-                        <li>Useful <a target="blank" href="http://www.onenexusproject.com/documentation/skeleton/helpers/">CSS Helper Classes</a></li>
-                        <li><a target="blank" href="http://www.onenexusproject.com/documentation/skeleton/print/">Default print CSS</a>, performance optimized</li>
-                    </ul>
+<pre><code class="language-markup">&lt;!DOCTYPE html>
+&lt;html>
+        
+    &lt;head>
+        &lt;!-- Page Title -->
+        &lt;title>Kayzen - Multi-Purpose HTML5 Theme&lt;/title>
+        
+        &lt;!-- Meta Tags -->
+        &lt;meta charset="utf-8">
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+        &lt;meta name="description" content="Multi-Purpose HTML5 Theme.">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=0.9">
+        &lt;meta name="HandheldFriendly" content="True">
+        &lt;meta name="MobileOptimized" content="320">
 
-<pre><code class="language-markup">
-&lt;!DOCTYPE html&gt;
-...
-&lt;!--[if !IE]&gt;&lt;!--&gt; &lt;html class=&quot;no-js&quot;&gt; &lt;!--&lt;![endif]--&gt;
+        &lt;!-- Icons -->
+        &lt;link rel="apple-touch-icon" href="/app/images/apple-icon-touch.png">
+        &lt;link rel="icon" href="/app/images/favicon.png">
+        &lt;!--[if IE]>&lt;link rel="shortcut icon" href="/app/images/favicon.ico">&lt;![endif]-->
 
-&lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
-    &lt;title&gt;Nexus - A clean &amp; Modern HTML Template&lt;/title&gt;
-    &lt;meta name=&quot;description&quot; content=&quot;Nexus is a premium, multi-purpose HTML template.&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=0.9&quot;&gt;
-    &lt;meta name=&quot;HandheldFriendly&quot; content=&quot;True&quot;&gt;
-    &lt;meta name=&quot;MobileOptimized&quot; content=&quot;320&quot;&gt;
-
-    &lt;!-- Icons &amp; favicons --&gt;
-    ...
-
-    &lt;!-- Stylesheet --&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/styles/css/app.css&quot;&gt;
-
-    &lt;!-- Modernizr --&gt;
-    &lt;script src=&quot;assets/js/modernizr.min.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-
-&lt;body class=&quot;further page-name&quot;&gt;
-
-    &lt;!-- MAIN CONTENT --&gt;
-
-    &lt;div id=&quot;site-content&quot;&gt;
-
-        &lt;header class=&quot;app-header&quot; id=&quot;app-header&quot;&gt;
-            &lt;div class=&quot;container&quot;&gt;
-                &lt;div class=&quot;header-wrapper&quot;&gt;
-                    &lt;!-- Logo --&gt;
-                    &lt;div class=&quot;logo&quot; id=&quot;logo&quot;&gt;
-                        ...
-                    &lt;/div&gt;
-                    &lt;!-- Main-Nav --&gt;
-                    &lt;nav class=&quot;main-nav&quot;&gt;
-                        ...
-                    &lt;/nav&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/header&gt;
-
-        &lt;!-- Main Content --&gt;
-        &lt;section class=&quot;section primary&quot;&gt;
-            ...
-        &lt;/section&gt;
-
-        &lt;footer class=&quot;app-footer&quot;&gt;
-            ...
-        &lt;/footer&gt;
-
-    &lt;/div&gt;&lt;!-- end #site-content --&gt;
-
-    &lt;!-- TOOLS/UTILITIES --&gt;
-
-    &lt;!-- Fixed header --&gt;
-    &lt;div class=&quot;fixed-header-container&quot; id=&quot;fixed-header&quot;&gt;&lt;/div&gt;
-
-    &lt;!-- Control Panel Nav Trigger --&gt;
-    &lt;span class=&quot;nav-trigger cp-trigger&quot; id=&quot;cp-trigger&quot;&gt;&lt;/span&gt;
-
-    &lt;!-- Flyout Nav Trigger --&gt;
-    &lt;span class=&quot;nav-trigger flyout-trigger&quot; id=&quot;flyout-trigger&quot;&gt;&lt;/span&gt;
-
-    &lt;!-- Control Panel Nav --&gt;
-    &lt;nav class=&quot;cp-nav-container&quot; id=&quot;cp-nav&quot;&gt;&lt;/nav&gt;
-
-    &lt;!-- Flyout Nav --&gt;
-    &lt;nav class=&quot;flyout-nav-container&quot; id=&quot;flyout-nav&quot;&gt;&lt;/nav&gt;
-
-    &lt;!-- Scroll-to-top Icon--&gt;
-    &lt;a class=&quot;fa fa-angle-up scroll-top&quot; href=&quot;#site-content&quot;&gt;&lt;/a&gt; 
-
-    &lt;!-- Main Search --&gt;
-    &lt;div class=&quot;main-search&quot; id=&quot;search&quot;&gt;
-        ...
-    &lt;/div&gt;
-
-    &lt;!-- Site Overlay --&gt;
-    &lt;div class=&quot;site-overlay invisible&quot; id=&quot;site-overlay&quot;&gt;&lt;/div&gt;
-
-    &lt;!-- SCRIPTS --&gt;
-
-    &lt;!-- jQuery --&gt;
-    &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;
-    &lt;!--&lt;script src=&quot;assets/js/jquery.min.js&quot;&gt;&lt;/script&gt;--&gt;
+        &lt;!-- Stylesheets -->
+        &lt;link rel="stylesheet" href="/app/themes/Kayzen/app.css">        
+        &lt;!-- pseudojQuery start -->
+        &lt;script src="/app/scripts/pseudojQuery-start.js">&lt;/script>        
+    &lt;/head>
     
-    &lt;!-- Google Map --&gt;
-    &lt;script type=&quot;text/javascript&quot; src=&quot;#YOURID&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;assets/js/google-map.js&quot;&gt;&lt;/script&gt;
+    &lt;body>
+        
+        &lt;div id="site-content">
+            &lt;!-- SITE CONTENT -->
+        &lt;/div>
 
-    &lt;!-- Interactive Elements/Modules --&gt;
-    ...
+        &lt;!-- UI Enhancements -->
 
-    &lt;!-- General --&gt;
-    &lt;script src=&quot;assets/js/global.js&quot;&gt;&lt;/script&gt;
+        &lt;!-- Site Overlay -->
+        &lt;div class="site-overlay" id="site-overlay">&lt;/div>
 
-&lt;/body&gt;
-&lt;/html&gt;
+        &lt;!-- Styles JSON Configuration -->
+        &lt;div id="modulesConfigJSON">&lt;/div>
+        
+        &lt;!-- Scripts -->
+        &lt;script type="text/javascript" src="/app/scripts/jquery.js">&lt;/script>
+        &lt;script type="text/javascript" src="/app/scripts/pseudojQuery-end.js">&lt;/script>
+        &lt;script type="text/javascript" src="/app/themes/Kayzen/app.js">&lt;/script>
+
+    &lt;/body>
+
+&lt;/html>
 </code></pre>
+
+                    <h2 class="dotted" id="features--options"><i>Features & Options</i></h2>
+
+                    <h2 class="dotted" id="custom-sections"><i>Custom Sections</i></h2>
 
                     <h2 class="dotted" id="resources"><i>Resources</i></h2>
 
