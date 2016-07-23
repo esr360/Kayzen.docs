@@ -39,8 +39,8 @@ Style Variants
  
 	&.border {
 		background: none;
-		border: 2px solid;
-		color: $grey;
+		border: 1px solid;
+		color: $light-grey;
 		&:hover {
 			background: $brand-1;
 			border-color: $brand-1;
