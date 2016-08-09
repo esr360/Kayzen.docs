@@ -26,8 +26,6 @@ dev/
 -- assets/
 -- builder/
 -- templates/
--- .gitignore
--- .gitmodules
 -- Gruntfile.js
 -- package.json
 prod/
@@ -92,7 +90,11 @@ Both the default provided `app.js` and `app.css` contain code from several third
 
 You will notice that all of the used third party resources exist on Github, and as such are included as [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). To install the required submodules, run the following command from the root of the `dev` directory:
 
-> Note that this may time some time...
+```
+git submodule add https://github.com/esr360/Kayzen.vendor.git
+```
+
+And then run the following (this may take some time):
 
 ```
 git submodule update --init --recursive
