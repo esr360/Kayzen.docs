@@ -2,6 +2,8 @@
 
 This is the official developer guide for the Kayzen HTML theme. If you are a customer of the theme you are entitled to access the private Kayzen repository located here: [https://github.com/esr360/Kayzen](https://github.com/esr360/Kayzen).
 
+> [Click Here](http://kayzen.skyux.com/docs/) to view the more simple user guide if you just want to get setup with the defauly Kayzen files.
+
 * [Getting Started](#getting-started)
 * [Configure](#configure)
 * [Build](#build)
@@ -15,8 +17,6 @@ This is the official developer guide for the Kayzen HTML theme. If you are a cus
 
 ## Getting Started
 
-> [Click Here](#html-templates) if you just want to get started using the default HTML files without touching any other code or going through any further setup.
-
 It's great that you've decided to checkout Kayzen! How you go about building your next project with it depends on many things such as your prefered workflow, your skill level, amount of time you have etc. This page will cover the basics of all the different ways Kayzen can be adapted to suit any need. It is assumed that you have at least basic HTML, CSS and JavaScript/jQuery understanding.
 
 You should have included with your purchase the following files and directories:
@@ -26,6 +26,8 @@ dev/
 -- assets/
 -- builder/
 -- templates/
+-- .gitignore
+-- .gitmodules
 -- Gruntfile.js
 -- package.json
 prod/
@@ -88,13 +90,15 @@ Both the default provided `app.js` and `app.css` contain code from several third
 * [Synergy](https://github.com/esr360/Synergy)
 * [TweeCool](https://github.com/esr360/tweecool-jquery-plugin)
 
-You will notice that all of the used third party resources exist on Github, and as such are included as [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). To install the required submodules, navigate to the `assets` directory on your command line, and run the following command:
+You will notice that all of the used third party resources exist on Github, and as such are included as [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). To install the required submodules, run the following command from the root of the `dev` directory:
+
+> Note that this may time some time...
 
 ```
-git clone https://github.com/esr360/Kayzen.vendor.git vendor --recursive
+git submodule update --init --recursive
 ```
 
-This will install all of the required submodules in a new `vendor` directory, allowing the Kayzen assets to access them to allow them to compile.
+This will install all of the required submodules in a new `assets/vendor` directory, allowing the Kayzen assets to access them to allow them to compile.
 
 You can now process the main project's Sass file at `assets/app.scss` using your desired compiler.
 
