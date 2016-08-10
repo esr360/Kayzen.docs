@@ -2,7 +2,9 @@
 
 This is the official developer guide for the Kayzen HTML theme. If you are a customer of the theme you are entitled to access the private Kayzen repository located here: [https://github.com/esr360/Kayzen](https://github.com/esr360/Kayzen).
 
-> [Click Here](http://kayzen.skyux.com/docs/) to view the more simple user guide if you just want to get setup with the defauly Kayzen files.
+> [Click Here](http://kayzen.skyux.com/docs/) to view the more simple user guide if you just want to get setup with the default Kayzen files.
+
+#### Table of Contents
 
 * [Getting Started](#getting-started)
 * [Configure](#configure)
@@ -65,6 +67,44 @@ If you are not yet familiar with Sass/SCSS or CSS pre-processing, checkout [this
 
 \[3\] - Required to convert the PHP templates into HTML files (optional)
 
+To build Kayzen, run the following sequence of command from the command line, ensuring you are in the root of the `dev` directory:
+
+##### Add third party libraries
+
+```
+git submodule add https://github.com/esr360/Kayzen.vendor.git
+```
+
+##### Initialise third party libraries
+
+> This will download all of the required submodules into a new `assets/vendor` directory, allowing the Kayzen assets to access them to allow them to compile, and may take some time.
+
+```
+git submodule update --init --recursive
+```
+
+##### Install NPM modules
+
+```
+npm install
+```
+
+##### Compile third party resources
+
+> This only ever needs to be ran once, during the initial setup
+
+```
+grunt setup
+```
+
+##### Compile assets
+
+```
+grunt compile
+```
+
+Your app should now be compiled into the `app` directory.
+
 Both the default provided `app.js` and `app.css` contain code from several third party libraries and plugins. The source files for these libraries and plugins reside in the **assets/vendor** folder, and include the following:
 
 * [Englighter](https://github.com/AndiDittrich/EnlighterJS)
@@ -88,21 +128,7 @@ Both the default provided `app.js` and `app.css` contain code from several third
 * [Synergy](https://github.com/esr360/Synergy)
 * [TweeCool](https://github.com/esr360/tweecool-jquery-plugin)
 
-You will notice that all of the used third party resources exist on Github, and as such are included as [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). To install the required submodules, run the following command from the root of the `dev` directory:
-
-```
-git submodule add https://github.com/esr360/Kayzen.vendor.git
-```
-
-And then run the following (this may take some time):
-
-```
-git submodule update --init --recursive
-```
-
-This will install all of the required submodules in a new `assets/vendor` directory, allowing the Kayzen assets to access them to allow them to compile.
-
-You can now process the main project's Sass file at `assets/app.scss` using your desired compiler.
+You will notice that all of the used third party resources exist on Github, and as such are included as [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
 #### Official Kayzen Repository
 
