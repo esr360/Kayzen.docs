@@ -994,6 +994,15 @@ If you encounter any issues which you cannot resolve, you can [get in touch](htt
 
 ## Changelog
 
+#### Version 1.2.0
+
+Released: 10th August 2016
+
+###### Release Notes
+
+* Fixing issue with building looking for minified files
+* Improving documentation
+
 #### Version 1.1.0
 
 Released: 21st July 2016
