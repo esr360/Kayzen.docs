@@ -1,8 +1,16 @@
-# Kayzen
+[![GitHub license](https://img.shields.io/badge/Version-1.2.0-blue.svg)](https://github.com/esr360/Kayzen/blob/master/version.md)
+[![GitHub license](https://api.travis-ci.org/esr360/Synergy.svg)](https://travis-ci.org/esr360/Synergy)
+
+<img src="http://kayzen.skyux.com/resources/logo.png" width="270">
 
 This is the official developer guide for the Kayzen HTML theme. If you are a customer of the theme you are entitled to access the private Kayzen repository located here: [https://github.com/esr360/Kayzen](https://github.com/esr360/Kayzen).
 
 > [Click Here](http://kayzen.skyux.com/docs/) to view the more simple user guide if you just want to get setup with the default Kayzen files.
+
+[View Demo](http://preview.themeforest.net/item/kayzen-multipurpose-html5-template/full_screen_preview/16768920) | 
+[View Sass Documentation](http://esr360.github.io/Kayzen/docs/sass)
+
+[![Kayzen - Premium HTML Theme Framework](http://skyux.com/images/kayzen-gh.png)](http://preview.themeforest.net/item/kayzen-multipurpose-html5-template/full_screen_preview/16768920)
 
 #### Table of Contents
 
