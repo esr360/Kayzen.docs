@@ -1002,6 +1002,12 @@ Released: 10th August 2016
 
 * Fixing issue with building looking for minified files
 * Improving documentation
+* Updating to Font-Awesome 4.6.3
+* Updating to Isotope 3.0.1
+* Updating to jquery-animateNumber 0.0.13
+* Updating to Masonry 4.1.0
+* Updating to normalize-scss 5.0.3
+* Updating to Owl-Carousel 2.1.6
 
 #### Version 1.1.0
 
