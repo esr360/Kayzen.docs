@@ -124,7 +124,7 @@ Both the default provided `app.js` and `app.css` contain code from several third
 * [k-preloaders](https://github.com/esr360/k-preloaders)
 * [Kayzen-GS](https://github.com/esr360/Kayzen-GS)
 * [Magnific-Popup](https://github.com/dimsemenov/Magnific-Popup)
-* [Masonry](https://github.com/SnapKit/Masonry)
+* [Masonry](https://github.com/desandro/masonry)
 * [matchMedia](https://github.com/paulirish/matchMedia.js)
 * [MooTools-Core](https://github.com/mootools/mootools-core)
 * [normalize-scss](https://github.com/JohnAlbin/normalize-scss)
