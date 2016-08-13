@@ -85,7 +85,7 @@ git clone https://github.com/esr360/Kayzen.vendor.git assets/vendor
 
 ##### Initialise third party libraries
 
-> This will download all of the required submodules into a new `assets/vendor` directory, allowing the Kayzen assets to access them to allow them to compile, and may take some time.
+> This may take some time...
 
 ```
 git submodule update --init --recursive
