@@ -80,7 +80,7 @@ To build Kayzen, run the following sequence of command from the command line, en
 ##### Add third party libraries
 
 ```
-git submodule add https://github.com/esr360/Kayzen.vendor.git assets/vendor
+git clone https://github.com/esr360/Kayzen.vendor.git assets/vendor
 ```
 
 ##### Initialise third party libraries
