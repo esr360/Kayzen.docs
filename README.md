@@ -75,7 +75,7 @@ If you are not yet familiar with Sass/SCSS or CSS pre-processing, checkout [this
 
 \[3\] - Required to convert the PHP templates into HTML files (optional)
 
-To build Kayzen, run the following sequence of command from the command line, ensuring you are in the root of the `dev` directory:
+To build Kayzen, run the following sequence of commands from the command line, ensuring you are in the root of the `dev` directory:
 
 ##### Add third party libraries
 
@@ -936,7 +936,7 @@ The page builder is only used to create new HTML pages to add to your existing K
 | `grunt templates`       | Used to generate HTML pages from your PHP templates (will only look for templates in the '/pages' and '/themes' directories) |
 | `grunt prototype`       | This task creates a fully useable prototype for the entire app which can be uploaded to a server |
 | `grunt release`         | Package and release a new version of your project |
-| `grunt compress:images` | This will compress all images in the 'demo' directory using the [TinyPNG API](https://tinypng.com/developers). Use liberally |
+| `grunt compress:images` | This will compress all images in the 'demo' directory using the [TinyPNG API](https://tinypng.com/developers) - use liberally |
 
 #### Grunt Options
 
