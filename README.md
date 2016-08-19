@@ -111,7 +111,9 @@ grunt setup
 grunt compile
 ```
 
-Your app should now be compiled into the `app` directory.
+Your assets should now be compiled into the `app` directory.
+
+> [Click here](#grunt-tasks) for a list of more Grunt tasks.
 
 Both the default provided `app.js` and `app.css` contain code from several third party libraries and plugins. The source files for these libraries and plugins reside in the **assets/vendor** folder, and include the following:
 
@@ -921,18 +923,20 @@ The page builder is only used to create new HTML pages to add to your existing K
 #### Executable Tasks
 
 | Task                    | Description |
-| ---                     | --- |
-| `grunt`                 | The default grunt task - runs the below `compile` task as well as the `watch` task. |
-| `grunt setup`           | This runs `npm install` and any neccessery Grunt tasks for vendor assets. This only needs to be done once during your initial setup. |
-| `grunt compile`         | This will compile your assets using the default value for the 'env' option. |
-| `grunt compile:dev`     | This will compile your assets for a development environment (assets will be unminified). |
-| `grunt compile:prod`    | This will compile your assets for a production environment (assets will be minified). |
-| `grunt templates`       | Used to generate HTML pages from your PHP templates (will only look for templates in the '/pages' and '/themes' directories). |
-| `grunt prototype`       | This task creates a fully useable prototype for the entire app which can be uploaded to a server. |
-| `grunt package`         | This runs the `compile`, `responsive_images` and `prototype` tasks.
-| `grunt test`            | This will execute code linters on your .scss and .js files. |
-| `grunt ship`            | This is the final task which should be ran before deploying to production. Runs the `package`, `test` and `compress:images` tasks. |
-| `grunt compress:images` | This will compress all images in the 'demo' directory using the [TinyPNG API](https://tinypng.com/developers). Use liberally. |
+| ----------------------- | ----------- |
+| `grunt`                 | The default grunt task - runs the below `compile` task as well as the `watch` task |
+| `grunt setup`           | This runs `npm install` and any neccessery Grunt tasks for vendor assets. This only needs to be done once during your initial setup |
+| `grunt test`            | This will execute code linters and unit tests on your .scss and .js files |
+| `grunt images`          | Create all images for the project |
+| `grunt compile`         | This will compile your assets using the default value for the 'env' option |
+| `grunt compile:dev`     | This will compile your assets for a development environment (assets will be unminified) |
+| `grunt compile:prod`    | This will compile your assets for a production environment (assets will be minified) |
+| `grunt theme`           | Compile assets for a specific theme |
+| `grunt compile:all`     | Compile assets for all themes |
+| `grunt templates`       | Used to generate HTML pages from your PHP templates (will only look for templates in the '/pages' and '/themes' directories) |
+| `grunt prototype`       | This task creates a fully useable prototype for the entire app which can be uploaded to a server |
+| `grunt release`         | Package and release a new version of your project |
+| `grunt compress:images` | This will compress all images in the 'demo' directory using the [TinyPNG API](https://tinypng.com/developers). Use liberally |
 
 #### Grunt Options
 
@@ -940,22 +944,22 @@ Using the [`grunt.option`](http://gruntjs.com/api/grunt.option) API, you can pas
 
 The below values will also automatically be updated in **app.php**.
 
-| Variable | Default&nbsp;Value | Description |
-| ---      | ---           | --- |
-| `theme`  | `Kayzen`      | This is the theme you wish to compile assets from. Theme must be present in the assets/themes directory. |
-| `realm`  | `demo`        | Can either be `demo` or `live`. Currently only used to serve placeholder images instead of stock photos. |
-| `env`    | `dev`         | Can either be `dev` or `prod`. Used to determine whether or not assets should be minified. |
-| `path`   | `root`        | Can either be `root` or `relative`, and will define how your asset paths are created. |
-| `themes` | `true`        | If enabled, assets will be compiled into individual theme folders (e.g. app/themes/Kayzen/scripts/app.js). |
+| Variable      | Default&nbsp;Value | Description |
+| ------------- | ------------------ | ----------- |
+| `version`     | `1.2.0`            | Set the version of your project |
+| `realm`       | `demo`             | ['live'|'demo] Set the realm of your project |
+| `env`         | `dev`              | ['dev'|'prod] Used to determine whether or not assets should be minified |
+| `path`        | `root`             | ['root'|'relative] Defines how asset paths are created. |
+| `multiThemes` | `true`             | If enabled, assets will be compiled into individual theme folders (e.g. app/themes/Kayzen/scripts/app.js). |
 
 The above options would be used when calling the grunt task, like so:
 
 ```
-grunt compile --env=prod --themes=false
+grunt compile --env=prod --multiThemes=false
 ```
 
 ```
-grunt templates --theme=YOURTHEME --realm=live
+grunt release --realm=live --env=dev --tag=1.2.0
 ```
 
 ## Test & Deploy
