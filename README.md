@@ -105,13 +105,21 @@ npm install
 grunt setup
 ```
 
-##### Compile assets
+##### Compile all themes
 
 ```
-grunt compile
+grunt themes
 ```
 
-Your assets should now be compiled into the `app` directory.
+##### Generate images
+
+> Requires [GraphicsMagick](#installing-graphicsmagick)
+
+```
+grunt images
+```
+
+Your theme assets should now be compiled into the `app` directory.
 
 > [Click here](#grunt-tasks) for a list of more Grunt tasks.
 
