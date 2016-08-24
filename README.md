@@ -105,13 +105,21 @@ npm install
 grunt setup
 ```
 
-##### Compile assets
+##### Compile all themes
 
 ```
-grunt compile
+grunt themes
 ```
 
-Your assets should now be compiled into the `app` directory.
+##### Generate images
+
+> Requires [GraphicsMagick](#installing-graphicsmagick)
+
+```
+grunt images
+```
+
+Your theme assets should now be compiled into the `app` directory.
 
 > [Click here](#grunt-tasks) for a list of more Grunt tasks.
 
@@ -929,9 +937,7 @@ The page builder is only used to create new HTML pages to add to your existing K
 | `grunt test`            | This will execute code linters and unit tests on your .scss and .js files |
 | `grunt images`          | Create all images for the project |
 | `grunt compile`         | This will compile your assets using the default value for the 'env' option |
-| `grunt compile:dev`     | This will compile your assets for a development environment (assets will be unminified) |
-| `grunt compile:prod`    | This will compile your assets for a production environment (assets will be minified) |
-| `grunt theme`           | Compile assets for a specific theme (`$ grunt compile:Kayzen`) |
+| `grunt theme`           | Compile assets for a specific theme (e.g. `$ grunt theme:Kayzen`) |
 | `grunt themes`          | Compile assets for all themes |
 | `grunt templates`       | Used to generate HTML pages from your PHP templates (will only look for templates in the '/pages' and '/themes' directories) |
 | `grunt prototype`       | This task creates a fully useable prototype for the entire app which can be uploaded to a server |
