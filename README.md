@@ -931,8 +931,8 @@ The page builder is only used to create new HTML pages to add to your existing K
 | `grunt compile`         | This will compile your assets using the default value for the 'env' option |
 | `grunt compile:dev`     | This will compile your assets for a development environment (assets will be unminified) |
 | `grunt compile:prod`    | This will compile your assets for a production environment (assets will be minified) |
-| `grunt theme`           | Compile assets for a specific theme |
-| `grunt compile:all`     | Compile assets for all themes |
+| `grunt theme`           | Compile assets for a specific theme (`$ grunt compile:Kayzen`) |
+| `grunt themes`          | Compile assets for all themes |
 | `grunt templates`       | Used to generate HTML pages from your PHP templates (will only look for templates in the '/pages' and '/themes' directories) |
 | `grunt prototype`       | This task creates a fully useable prototype for the entire app which can be uploaded to a server |
 | `grunt release`         | Package and release a new version of your project |
