@@ -953,9 +953,9 @@ The below values will also automatically be updated in **app.php**.
 | Variable      | Default&nbsp;Value | Description |
 | ------------- | ------------------ | ----------- |
 | `version`     | `1.2.0`            | Set the version of your project |
-| `realm`       | `demo`             | ['live'|'demo] Set the realm of your project |
-| `env`         | `dev`              | ['dev'|'prod] Used to determine whether or not assets should be minified |
-| `path`        | `root`             | ['root'|'relative] Defines how asset paths are created. |
+| `realm`       | `demo`             | ('live'|'demo) Set the realm of your project |
+| `env`         | `dev`              | ('dev'|'prod) Used to determine whether or not assets should be minified |
+| `path`        | `root`             | ('root'|'relative) Defines how asset paths are created. |
 | `multiThemes` | `true`             | If enabled, assets will be compiled into individual theme folders (e.g. app/themes/Kayzen/scripts/app.js). |
 
 The above options would be used when calling the grunt task, like so:
